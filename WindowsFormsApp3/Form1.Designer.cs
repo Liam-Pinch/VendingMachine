@@ -480,6 +480,7 @@
             this.pbCoinSlot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbCoinSlot.TabIndex = 57;
             this.pbCoinSlot.TabStop = false;
+            this.pbCoinSlot.DragDrop += new System.Windows.Forms.DragEventHandler(this.pbCoinSlot_DragDrop);
             // 
             // pbFivePence
             // 

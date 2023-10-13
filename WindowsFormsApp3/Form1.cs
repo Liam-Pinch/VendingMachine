@@ -623,5 +623,16 @@ namespace WindowsFormsApp3
             btnCrispTwo.Enabled = false;
             btnCrispThree.Enabled = false;
         }
+
+        private void pbCoinSlot_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Bitmap))
+            {
+                Image imageUsed = (Image)e.Data.GetData(DataFormats.Bitmap);
+                string checkTag = imageUsed.Tag as string;
+                // these changes 
+            }
+        }
     }
+
 }
