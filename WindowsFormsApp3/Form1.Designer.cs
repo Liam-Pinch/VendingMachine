@@ -42,18 +42,6 @@
             this.btnCrispTwo = new System.Windows.Forms.Button();
             this.btnCrispThree = new System.Windows.Forms.Button();
             this.tbPriceOne = new System.Windows.Forms.TextBox();
-            this.tbQuantityOne = new System.Windows.Forms.TextBox();
-            this.tbQuantityTwo = new System.Windows.Forms.TextBox();
-            this.tbQuantityThree = new System.Windows.Forms.TextBox();
-            this.tbQuantityFour = new System.Windows.Forms.TextBox();
-            this.tbQuantityFive = new System.Windows.Forms.TextBox();
-            this.tbQuantitySix = new System.Windows.Forms.TextBox();
-            this.tbQuantitySeven = new System.Windows.Forms.TextBox();
-            this.tbQuantityEight = new System.Windows.Forms.TextBox();
-            this.tbQuantityNine = new System.Windows.Forms.TextBox();
-            this.tbQuantityTen = new System.Windows.Forms.TextBox();
-            this.tbQuantityEleven = new System.Windows.Forms.TextBox();
-            this.tbQuantityTwelve = new System.Windows.Forms.TextBox();
             this.tbPriceTwo = new System.Windows.Forms.TextBox();
             this.tbPriceThree = new System.Windows.Forms.TextBox();
             this.tbPriceFour = new System.Windows.Forms.TextBox();
@@ -79,8 +67,26 @@
             this.lblBtnTen = new System.Windows.Forms.Label();
             this.lblBtnEleven = new System.Windows.Forms.Label();
             this.lblBtnTwelve = new System.Windows.Forms.Label();
-            this.PowerButton = new System.Windows.Forms.Button();
             this.OrderDisplayBox = new System.Windows.Forms.ListBox();
+            this.pbCoinSlot = new System.Windows.Forms.PictureBox();
+            this.pbFivePence = new System.Windows.Forms.PictureBox();
+            this.pbTenPence = new System.Windows.Forms.PictureBox();
+            this.pbOnePound = new System.Windows.Forms.PictureBox();
+            this.pbFiftyPence = new System.Windows.Forms.PictureBox();
+            this.pbTwentyPence = new System.Windows.Forms.PictureBox();
+            this.pbTwoPound = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnPayNow = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCoinSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFivePence)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTenPence)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOnePound)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFiftyPence)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTwentyPence)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTwoPound)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnDrinkOne
@@ -226,126 +232,6 @@
             this.tbPriceOne.Text = "1.95";
             this.tbPriceOne.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tbQuantityOne
-            // 
-            this.tbQuantityOne.Location = new System.Drawing.Point(105, 177);
-            this.tbQuantityOne.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQuantityOne.Name = "tbQuantityOne";
-            this.tbQuantityOne.Size = new System.Drawing.Size(47, 22);
-            this.tbQuantityOne.TabIndex = 13;
-            this.tbQuantityOne.Text = "5";
-            this.tbQuantityOne.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbQuantityTwo
-            // 
-            this.tbQuantityTwo.Location = new System.Drawing.Point(291, 177);
-            this.tbQuantityTwo.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQuantityTwo.Name = "tbQuantityTwo";
-            this.tbQuantityTwo.Size = new System.Drawing.Size(47, 22);
-            this.tbQuantityTwo.TabIndex = 14;
-            this.tbQuantityTwo.Text = "5";
-            this.tbQuantityTwo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbQuantityThree
-            // 
-            this.tbQuantityThree.Location = new System.Drawing.Point(477, 177);
-            this.tbQuantityThree.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQuantityThree.Name = "tbQuantityThree";
-            this.tbQuantityThree.Size = new System.Drawing.Size(47, 22);
-            this.tbQuantityThree.TabIndex = 15;
-            this.tbQuantityThree.Text = "5";
-            this.tbQuantityThree.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbQuantityFour
-            // 
-            this.tbQuantityFour.Location = new System.Drawing.Point(105, 374);
-            this.tbQuantityFour.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQuantityFour.Name = "tbQuantityFour";
-            this.tbQuantityFour.Size = new System.Drawing.Size(47, 22);
-            this.tbQuantityFour.TabIndex = 16;
-            this.tbQuantityFour.Text = "5";
-            this.tbQuantityFour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbQuantityFive
-            // 
-            this.tbQuantityFive.Location = new System.Drawing.Point(291, 373);
-            this.tbQuantityFive.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQuantityFive.Name = "tbQuantityFive";
-            this.tbQuantityFive.Size = new System.Drawing.Size(47, 22);
-            this.tbQuantityFive.TabIndex = 17;
-            this.tbQuantityFive.Text = "5";
-            this.tbQuantityFive.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbQuantitySix
-            // 
-            this.tbQuantitySix.Location = new System.Drawing.Point(477, 371);
-            this.tbQuantitySix.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQuantitySix.Name = "tbQuantitySix";
-            this.tbQuantitySix.Size = new System.Drawing.Size(47, 22);
-            this.tbQuantitySix.TabIndex = 18;
-            this.tbQuantitySix.Text = "5";
-            this.tbQuantitySix.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbQuantitySeven
-            // 
-            this.tbQuantitySeven.Location = new System.Drawing.Point(105, 554);
-            this.tbQuantitySeven.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQuantitySeven.Name = "tbQuantitySeven";
-            this.tbQuantitySeven.Size = new System.Drawing.Size(47, 22);
-            this.tbQuantitySeven.TabIndex = 19;
-            this.tbQuantitySeven.Text = "5";
-            this.tbQuantitySeven.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbQuantityEight
-            // 
-            this.tbQuantityEight.Location = new System.Drawing.Point(291, 554);
-            this.tbQuantityEight.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQuantityEight.Name = "tbQuantityEight";
-            this.tbQuantityEight.Size = new System.Drawing.Size(47, 22);
-            this.tbQuantityEight.TabIndex = 20;
-            this.tbQuantityEight.Text = "5";
-            this.tbQuantityEight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbQuantityNine
-            // 
-            this.tbQuantityNine.Location = new System.Drawing.Point(477, 554);
-            this.tbQuantityNine.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQuantityNine.Name = "tbQuantityNine";
-            this.tbQuantityNine.Size = new System.Drawing.Size(47, 22);
-            this.tbQuantityNine.TabIndex = 21;
-            this.tbQuantityNine.Text = "5";
-            this.tbQuantityNine.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbQuantityTen
-            // 
-            this.tbQuantityTen.Location = new System.Drawing.Point(105, 753);
-            this.tbQuantityTen.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQuantityTen.Name = "tbQuantityTen";
-            this.tbQuantityTen.Size = new System.Drawing.Size(47, 22);
-            this.tbQuantityTen.TabIndex = 22;
-            this.tbQuantityTen.Text = "5";
-            this.tbQuantityTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbQuantityEleven
-            // 
-            this.tbQuantityEleven.Location = new System.Drawing.Point(291, 753);
-            this.tbQuantityEleven.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQuantityEleven.Name = "tbQuantityEleven";
-            this.tbQuantityEleven.Size = new System.Drawing.Size(47, 22);
-            this.tbQuantityEleven.TabIndex = 23;
-            this.tbQuantityEleven.Text = "5";
-            this.tbQuantityEleven.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbQuantityTwelve
-            // 
-            this.tbQuantityTwelve.Location = new System.Drawing.Point(477, 753);
-            this.tbQuantityTwelve.Margin = new System.Windows.Forms.Padding(4);
-            this.tbQuantityTwelve.Name = "tbQuantityTwelve";
-            this.tbQuantityTwelve.Size = new System.Drawing.Size(47, 22);
-            this.tbQuantityTwelve.TabIndex = 24;
-            this.tbQuantityTwelve.Text = "5";
-            this.tbQuantityTwelve.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // tbPriceTwo
             // 
             this.tbPriceTwo.Location = new System.Drawing.Point(363, 177);
@@ -460,7 +346,7 @@
             // txtBoxTotalCost
             // 
             this.txtBoxTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxTotalCost.Location = new System.Drawing.Point(689, 631);
+            this.txtBoxTotalCost.Location = new System.Drawing.Point(711, 270);
             this.txtBoxTotalCost.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxTotalCost.Multiline = true;
             this.txtBoxTotalCost.Name = "txtBoxTotalCost";
@@ -471,7 +357,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(689, 693);
+            this.btnClear.Location = new System.Drawing.Point(711, 332);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(155, 40);
             this.btnClear.TabIndex = 38;
@@ -575,33 +461,131 @@
             this.lblBtnTwelve.TabIndex = 52;
             this.lblBtnTwelve.Text = "Takis ";
             // 
-            // PowerButton
-            // 
-            this.PowerButton.Location = new System.Drawing.Point(25, 55);
-            this.PowerButton.Name = "PowerButton";
-            this.PowerButton.Size = new System.Drawing.Size(53, 53);
-            this.PowerButton.TabIndex = 53;
-            this.PowerButton.Text = "Off";
-            this.PowerButton.UseVisualStyleBackColor = true;
-            this.PowerButton.Click += new System.EventHandler(this.PowerButton_Click);
-            // 
             // OrderDisplayBox
             // 
             this.OrderDisplayBox.FormattingEnabled = true;
             this.OrderDisplayBox.ItemHeight = 16;
-            this.OrderDisplayBox.Location = new System.Drawing.Point(734, 55);
+            this.OrderDisplayBox.Location = new System.Drawing.Point(711, 55);
             this.OrderDisplayBox.Name = "OrderDisplayBox";
-            this.OrderDisplayBox.Size = new System.Drawing.Size(223, 180);
+            this.OrderDisplayBox.Size = new System.Drawing.Size(223, 196);
             this.OrderDisplayBox.TabIndex = 54;
             this.OrderDisplayBox.SelectedIndexChanged += new System.EventHandler(this.OrderDisplayBox_SelectedIndexChanged);
+            // 
+            // pbCoinSlot
+            // 
+            this.pbCoinSlot.Image = ((System.Drawing.Image)(resources.GetObject("pbCoinSlot.Image")));
+            this.pbCoinSlot.Location = new System.Drawing.Point(956, 55);
+            this.pbCoinSlot.Name = "pbCoinSlot";
+            this.pbCoinSlot.Size = new System.Drawing.Size(200, 200);
+            this.pbCoinSlot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbCoinSlot.TabIndex = 57;
+            this.pbCoinSlot.TabStop = false;
+            // 
+            // pbFivePence
+            // 
+            this.pbFivePence.Image = ((System.Drawing.Image)(resources.GetObject("pbFivePence.Image")));
+            this.pbFivePence.Location = new System.Drawing.Point(75, 52);
+            this.pbFivePence.Name = "pbFivePence";
+            this.pbFivePence.Size = new System.Drawing.Size(80, 80);
+            this.pbFivePence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbFivePence.TabIndex = 0;
+            this.pbFivePence.TabStop = false;
+            // 
+            // pbTenPence
+            // 
+            this.pbTenPence.Image = ((System.Drawing.Image)(resources.GetObject("pbTenPence.Image")));
+            this.pbTenPence.Location = new System.Drawing.Point(203, 44);
+            this.pbTenPence.Name = "pbTenPence";
+            this.pbTenPence.Size = new System.Drawing.Size(100, 100);
+            this.pbTenPence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbTenPence.TabIndex = 1;
+            this.pbTenPence.TabStop = false;
+            // 
+            // pbOnePound
+            // 
+            this.pbOnePound.Image = ((System.Drawing.Image)(resources.GetObject("pbOnePound.Image")));
+            this.pbOnePound.Location = new System.Drawing.Point(289, 187);
+            this.pbOnePound.Name = "pbOnePound";
+            this.pbOnePound.Size = new System.Drawing.Size(110, 109);
+            this.pbOnePound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbOnePound.TabIndex = 2;
+            this.pbOnePound.TabStop = false;
+            // 
+            // pbFiftyPence
+            // 
+            this.pbFiftyPence.Image = ((System.Drawing.Image)(resources.GetObject("pbFiftyPence.Image")));
+            this.pbFiftyPence.Location = new System.Drawing.Point(75, 187);
+            this.pbFiftyPence.Name = "pbFiftyPence";
+            this.pbFiftyPence.Size = new System.Drawing.Size(100, 100);
+            this.pbFiftyPence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbFiftyPence.TabIndex = 3;
+            this.pbFiftyPence.TabStop = false;
+            // 
+            // pbTwentyPence
+            // 
+            this.pbTwentyPence.Image = ((System.Drawing.Image)(resources.GetObject("pbTwentyPence.Image")));
+            this.pbTwentyPence.Location = new System.Drawing.Point(345, 52);
+            this.pbTwentyPence.Name = "pbTwentyPence";
+            this.pbTwentyPence.Size = new System.Drawing.Size(100, 100);
+            this.pbTwentyPence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbTwentyPence.TabIndex = 4;
+            this.pbTwentyPence.TabStop = false;
+            // 
+            // pbTwoPound
+            // 
+            this.pbTwoPound.Image = ((System.Drawing.Image)(resources.GetObject("pbTwoPound.Image")));
+            this.pbTwoPound.Location = new System.Drawing.Point(75, 336);
+            this.pbTwoPound.Name = "pbTwoPound";
+            this.pbTwoPound.Size = new System.Drawing.Size(250, 116);
+            this.pbTwoPound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbTwoPound.TabIndex = 5;
+            this.pbTwoPound.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Location = new System.Drawing.Point(880, -40);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox8.TabIndex = 7;
+            this.pictureBox8.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.pictureBox8);
+            this.groupBox1.Controls.Add(this.pbTwoPound);
+            this.groupBox1.Controls.Add(this.pbTwentyPence);
+            this.groupBox1.Controls.Add(this.pbFiftyPence);
+            this.groupBox1.Controls.Add(this.pbOnePound);
+            this.groupBox1.Controls.Add(this.pbTenPence);
+            this.groupBox1.Controls.Add(this.pbFivePence);
+            this.groupBox1.Location = new System.Drawing.Point(711, 378);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(527, 492);
+            this.groupBox1.TabIndex = 55;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Money";
+            this.groupBox1.Visible = false;
+            // 
+            // btnPayNow
+            // 
+            this.btnPayNow.Location = new System.Drawing.Point(881, 332);
+            this.btnPayNow.Name = "btnPayNow";
+            this.btnPayNow.Size = new System.Drawing.Size(155, 39);
+            this.btnPayNow.TabIndex = 58;
+            this.btnPayNow.Text = "Checkout";
+            this.btnPayNow.UseVisualStyleBackColor = true;
+            this.btnPayNow.Click += new System.EventHandler(this.btnPayNow_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1359, 869);
+            this.Controls.Add(this.btnPayNow);
+            this.Controls.Add(this.pbCoinSlot);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.OrderDisplayBox);
-            this.Controls.Add(this.PowerButton);
             this.Controls.Add(this.lblBtnThree);
             this.Controls.Add(this.lblBtnFour);
             this.Controls.Add(this.lblBtnFive);
@@ -627,18 +611,6 @@
             this.Controls.Add(this.tbPriceFour);
             this.Controls.Add(this.tbPriceThree);
             this.Controls.Add(this.tbPriceTwo);
-            this.Controls.Add(this.tbQuantityTwelve);
-            this.Controls.Add(this.tbQuantityEleven);
-            this.Controls.Add(this.tbQuantityTen);
-            this.Controls.Add(this.tbQuantityNine);
-            this.Controls.Add(this.tbQuantityEight);
-            this.Controls.Add(this.tbQuantitySeven);
-            this.Controls.Add(this.tbQuantitySix);
-            this.Controls.Add(this.tbQuantityFive);
-            this.Controls.Add(this.tbQuantityFour);
-            this.Controls.Add(this.tbQuantityThree);
-            this.Controls.Add(this.tbQuantityTwo);
-            this.Controls.Add(this.tbQuantityOne);
             this.Controls.Add(this.tbPriceOne);
             this.Controls.Add(this.btnCrispThree);
             this.Controls.Add(this.btnCrispTwo);
@@ -656,6 +628,16 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbCoinSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFivePence)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTenPence)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOnePound)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFiftyPence)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTwentyPence)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTwoPound)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -676,18 +658,6 @@
         private System.Windows.Forms.Button btnCrispTwo;
         private System.Windows.Forms.Button btnCrispThree;
         private System.Windows.Forms.TextBox tbPriceOne;
-        private System.Windows.Forms.TextBox tbQuantityOne;
-        private System.Windows.Forms.TextBox tbQuantityTwo;
-        private System.Windows.Forms.TextBox tbQuantityThree;
-        private System.Windows.Forms.TextBox tbQuantityFour;
-        private System.Windows.Forms.TextBox tbQuantityFive;
-        private System.Windows.Forms.TextBox tbQuantitySix;
-        private System.Windows.Forms.TextBox tbQuantitySeven;
-        private System.Windows.Forms.TextBox tbQuantityEight;
-        private System.Windows.Forms.TextBox tbQuantityNine;
-        private System.Windows.Forms.TextBox tbQuantityTen;
-        private System.Windows.Forms.TextBox tbQuantityEleven;
-        private System.Windows.Forms.TextBox tbQuantityTwelve;
         private System.Windows.Forms.TextBox tbPriceTwo;
         private System.Windows.Forms.TextBox tbPriceThree;
         private System.Windows.Forms.TextBox tbPriceFour;
@@ -713,8 +683,17 @@
         private System.Windows.Forms.Label lblBtnTen;
         private System.Windows.Forms.Label lblBtnEleven;
         private System.Windows.Forms.Label lblBtnTwelve;
-        private System.Windows.Forms.Button PowerButton;
         private System.Windows.Forms.ListBox OrderDisplayBox;
+        private System.Windows.Forms.PictureBox pbCoinSlot;
+        private System.Windows.Forms.PictureBox pbFivePence;
+        private System.Windows.Forms.PictureBox pbTenPence;
+        private System.Windows.Forms.PictureBox pbOnePound;
+        private System.Windows.Forms.PictureBox pbFiftyPence;
+        private System.Windows.Forms.PictureBox pbTwentyPence;
+        private System.Windows.Forms.PictureBox pbTwoPound;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnPayNow;
     }
 }
 

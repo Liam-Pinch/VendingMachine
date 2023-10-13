@@ -18,19 +18,6 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
 
-            // disables all the buttons when the form loads.
-            btnDrinkOne.Enabled = false;
-            btnDrinkTwo.Enabled = false;
-            btnDrinkThree.Enabled = false;
-            btnDrinkFour.Enabled = false;
-            btnDrinkFive.Enabled = false;
-            btnDrinkSix.Enabled = false;
-            btnChocoOne.Enabled = false;
-            btnChocoTwo.Enabled = false;
-            btnChocoThree.Enabled = false;
-            btnCrispOne.Enabled = false;
-            btnCrispTwo.Enabled = false;
-            btnCrispThree.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -260,6 +247,7 @@ namespace WindowsFormsApp3
             if (txtBoxTotalCost.Text == "0.00")
             {
                 txtBoxTotalCost.Text = tbPriceFive.Text;
+                OrderDisplayBox.Items.Add(lblBtnFive.Text + "        " + (counter + 1));
             }
             else
             {
@@ -593,11 +581,6 @@ namespace WindowsFormsApp3
         {
             txtBoxTotalCost.Text = "0.00";
             OrderDisplayBox.Items.Clear();
-        }
-
-        private void PowerButton_Click(object sender, EventArgs e)
-        {
-            PowerButton.Text = "On";
 
             btnDrinkOne.Enabled = true;
             btnDrinkTwo.Enabled = true;
@@ -611,11 +594,34 @@ namespace WindowsFormsApp3
             btnCrispOne.Enabled = true;
             btnCrispTwo.Enabled = true;
             btnCrispThree.Enabled = true;
+
+            groupBox1.Visible = false;
+
         }
 
         private void OrderDisplayBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        
+
+        private void btnPayNow_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = true;
+
+            btnDrinkOne.Enabled = false;
+            btnDrinkTwo.Enabled = false;
+            btnDrinkThree.Enabled = false;
+            btnDrinkFour.Enabled = false;
+            btnDrinkFive.Enabled = false;
+            btnDrinkSix.Enabled = false;
+            btnChocoOne.Enabled = false;
+            btnChocoTwo.Enabled = false;
+            btnChocoThree.Enabled = false;
+            btnCrispOne.Enabled = false;
+            btnCrispTwo.Enabled = false;
+            btnCrispThree.Enabled = false;
         }
     }
 }
