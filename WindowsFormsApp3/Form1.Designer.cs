@@ -74,9 +74,10 @@
             this.pbOnePound = new System.Windows.Forms.PictureBox();
             this.pbFiftyPence = new System.Windows.Forms.PictureBox();
             this.pbTwentyPence = new System.Windows.Forms.PictureBox();
-            this.pbTwoPound = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pbFivePound = new System.Windows.Forms.PictureBox();
+            this.pbTwoPound = new System.Windows.Forms.PictureBox();
             this.btnPayNow = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoinSlot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFivePence)).BeginInit();
@@ -84,9 +85,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbOnePound)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFiftyPence)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTwentyPence)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTwoPound)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFivePound)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTwoPound)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDrinkOne
@@ -481,66 +483,67 @@
             this.pbCoinSlot.TabIndex = 57;
             this.pbCoinSlot.TabStop = false;
             this.pbCoinSlot.DragDrop += new System.Windows.Forms.DragEventHandler(this.pbCoinSlot_DragDrop);
+            this.pbCoinSlot.DragEnter += new System.Windows.Forms.DragEventHandler(this.pbCoinSlot_DragEnter);
             // 
             // pbFivePence
             // 
             this.pbFivePence.Image = ((System.Drawing.Image)(resources.GetObject("pbFivePence.Image")));
-            this.pbFivePence.Location = new System.Drawing.Point(75, 52);
+            this.pbFivePence.Location = new System.Drawing.Point(36, 54);
             this.pbFivePence.Name = "pbFivePence";
             this.pbFivePence.Size = new System.Drawing.Size(80, 80);
             this.pbFivePence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbFivePence.TabIndex = 0;
             this.pbFivePence.TabStop = false;
+            this.pbFivePence.Tag = "0.05";
+            this.pbFivePence.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbFivePence_MouseDown);
             // 
             // pbTenPence
             // 
             this.pbTenPence.Image = ((System.Drawing.Image)(resources.GetObject("pbTenPence.Image")));
-            this.pbTenPence.Location = new System.Drawing.Point(203, 44);
+            this.pbTenPence.Location = new System.Drawing.Point(159, 52);
             this.pbTenPence.Name = "pbTenPence";
             this.pbTenPence.Size = new System.Drawing.Size(100, 100);
             this.pbTenPence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbTenPence.TabIndex = 1;
             this.pbTenPence.TabStop = false;
+            this.pbTenPence.Tag = "0.10";
+            this.pbTenPence.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbTenPence_MouseDown);
             // 
             // pbOnePound
             // 
             this.pbOnePound.Image = ((System.Drawing.Image)(resources.GetObject("pbOnePound.Image")));
-            this.pbOnePound.Location = new System.Drawing.Point(289, 187);
+            this.pbOnePound.Location = new System.Drawing.Point(172, 196);
             this.pbOnePound.Name = "pbOnePound";
             this.pbOnePound.Size = new System.Drawing.Size(110, 109);
-            this.pbOnePound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbOnePound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbOnePound.TabIndex = 2;
             this.pbOnePound.TabStop = false;
+            this.pbOnePound.Tag = "1";
+            this.pbOnePound.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbOnePound_MouseDown);
             // 
             // pbFiftyPence
             // 
             this.pbFiftyPence.Image = ((System.Drawing.Image)(resources.GetObject("pbFiftyPence.Image")));
-            this.pbFiftyPence.Location = new System.Drawing.Point(75, 187);
+            this.pbFiftyPence.Location = new System.Drawing.Point(36, 196);
             this.pbFiftyPence.Name = "pbFiftyPence";
-            this.pbFiftyPence.Size = new System.Drawing.Size(100, 100);
-            this.pbFiftyPence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbFiftyPence.Size = new System.Drawing.Size(110, 109);
+            this.pbFiftyPence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFiftyPence.TabIndex = 3;
             this.pbFiftyPence.TabStop = false;
+            this.pbFiftyPence.Tag = "0.50";
+            this.pbFiftyPence.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbFiftyPence_MouseDown);
             // 
             // pbTwentyPence
             // 
             this.pbTwentyPence.Image = ((System.Drawing.Image)(resources.GetObject("pbTwentyPence.Image")));
-            this.pbTwentyPence.Location = new System.Drawing.Point(345, 52);
+            this.pbTwentyPence.Location = new System.Drawing.Point(321, 52);
             this.pbTwentyPence.Name = "pbTwentyPence";
             this.pbTwentyPence.Size = new System.Drawing.Size(100, 100);
-            this.pbTwentyPence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbTwentyPence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTwentyPence.TabIndex = 4;
             this.pbTwentyPence.TabStop = false;
-            // 
-            // pbTwoPound
-            // 
-            this.pbTwoPound.Image = ((System.Drawing.Image)(resources.GetObject("pbTwoPound.Image")));
-            this.pbTwoPound.Location = new System.Drawing.Point(75, 336);
-            this.pbTwoPound.Name = "pbTwoPound";
-            this.pbTwoPound.Size = new System.Drawing.Size(250, 116);
-            this.pbTwoPound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbTwoPound.TabIndex = 5;
-            this.pbTwoPound.TabStop = false;
+            this.pbTwentyPence.Tag = "0.20";
+            this.pbTwentyPence.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbTwentyPence_MouseDown);
             // 
             // pictureBox8
             // 
@@ -553,8 +556,9 @@
             // groupBox1
             // 
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.pictureBox8);
+            this.groupBox1.Controls.Add(this.pbFivePound);
             this.groupBox1.Controls.Add(this.pbTwoPound);
+            this.groupBox1.Controls.Add(this.pictureBox8);
             this.groupBox1.Controls.Add(this.pbTwentyPence);
             this.groupBox1.Controls.Add(this.pbFiftyPence);
             this.groupBox1.Controls.Add(this.pbOnePound);
@@ -567,6 +571,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Money";
             this.groupBox1.Visible = false;
+            // 
+            // pbFivePound
+            // 
+            this.pbFivePound.Image = ((System.Drawing.Image)(resources.GetObject("pbFivePound.Image")));
+            this.pbFivePound.Location = new System.Drawing.Point(75, 354);
+            this.pbFivePound.Name = "pbFivePound";
+            this.pbFivePound.Size = new System.Drawing.Size(280, 109);
+            this.pbFivePound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFivePound.TabIndex = 9;
+            this.pbFivePound.TabStop = false;
+            this.pbFivePound.Tag = "5";
+            this.pbFivePound.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbFivePound_MouseDown);
+            // 
+            // pbTwoPound
+            // 
+            this.pbTwoPound.Image = ((System.Drawing.Image)(resources.GetObject("pbTwoPound.Image")));
+            this.pbTwoPound.Location = new System.Drawing.Point(321, 196);
+            this.pbTwoPound.Name = "pbTwoPound";
+            this.pbTwoPound.Size = new System.Drawing.Size(110, 109);
+            this.pbTwoPound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTwoPound.TabIndex = 8;
+            this.pbTwoPound.TabStop = false;
+            this.pbTwoPound.Tag = "2";
+            this.pbTwoPound.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbTwoPound_MouseDown);
             // 
             // btnPayNow
             // 
@@ -635,10 +663,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbOnePound)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFiftyPence)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTwentyPence)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTwoPound)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFivePound)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTwoPound)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -691,10 +720,11 @@
         private System.Windows.Forms.PictureBox pbOnePound;
         private System.Windows.Forms.PictureBox pbFiftyPence;
         private System.Windows.Forms.PictureBox pbTwentyPence;
-        private System.Windows.Forms.PictureBox pbTwoPound;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnPayNow;
+        private System.Windows.Forms.PictureBox pbFivePound;
+        private System.Windows.Forms.PictureBox pbTwoPound;
     }
 }
 

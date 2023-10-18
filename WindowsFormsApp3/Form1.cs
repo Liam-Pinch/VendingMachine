@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WindowsFormsApp3
 {
@@ -17,6 +18,8 @@ namespace WindowsFormsApp3
         public Form1()
         {
             InitializeComponent();
+            pbCoinSlot.AllowDrop = true;
+
 
         }
 
@@ -117,6 +120,7 @@ namespace WindowsFormsApp3
             if (txtBoxTotalCost.Text == "0.00")
             {
                 txtBoxTotalCost.Text = tbPriceTwo.Text;
+                OrderDisplayBox.Items.Add(lblBtnTwo.Text + "        " + (counter + 1));
             }
             else
             {
@@ -292,6 +296,7 @@ namespace WindowsFormsApp3
             if (txtBoxTotalCost.Text == "0.00")
             {
                 txtBoxTotalCost.Text = tbPriceSix.Text;
+                OrderDisplayBox.Items.Add(lblBtnFive.Text + "        " + (counter + 1));
             }
             else
             {
@@ -579,9 +584,106 @@ namespace WindowsFormsApp3
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            // call the reset form function. Disabling the money buttons.
+            resetForm();
+
+        }
+
+        private void OrderDisplayBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void btnPayNow_Click(object sender, EventArgs e)
+        {
+            // function to enable payment. Button only enabled when there are items to pay for.
+            if (double.Parse(txtBoxTotalCost.Text) != 0)
+            {
+                groupBox1.Visible = true;
+
+                btnDrinkOne.Enabled = false;
+                btnDrinkTwo.Enabled = false;
+                btnDrinkThree.Enabled = false;
+                btnDrinkFour.Enabled = false;
+                btnDrinkFive.Enabled = false;
+                btnDrinkSix.Enabled = false;
+                btnChocoOne.Enabled = false;
+                btnChocoTwo.Enabled = false;
+                btnChocoThree.Enabled = false;
+                btnCrispOne.Enabled = false;
+                btnCrispTwo.Enabled = false;
+                btnCrispThree.Enabled = false;
+            }
+
+            
+
+        }
+
+        private void pbFivePence_MouseDown(object sender, MouseEventArgs e)
+        {
+            // function to begin drag drop & capture tag data to be used as input when dropped
+            DataObject data = new DataObject("coinTag", pbFivePence.Tag);
+            pbFivePence.DoDragDrop(data, DragDropEffects.Copy);
+        }
+
+        private void pbTenPence_MouseDown(object sender, MouseEventArgs e)
+        {
+            // function to begin drag drop & capture tag data to be used as input when dropped
+            DataObject data = new DataObject("coinTag", pbTenPence.Tag);
+            pbTenPence.DoDragDrop(data, DragDropEffects.Copy);
+        }
+
+        private void pbTwentyPence_MouseDown(object sender, MouseEventArgs e)
+        {
+            // function to begin drag drop & capture tag data to be used as input when dropped
+            DataObject data = new DataObject("coinTag", pbTwentyPence.Tag);
+            pbTwentyPence.DoDragDrop(data, DragDropEffects.Copy);
+        }
+
+        private void pbFiftyPence_MouseDown(object sender, MouseEventArgs e)
+        {
+            // function to begin drag drop & capture tag data to be used as input when dropped
+            DataObject data = new DataObject("coinTag", pbFiftyPence.Tag);
+            pbFiftyPence.DoDragDrop(data, DragDropEffects.Copy);
+        }
+
+        private void pbOnePound_MouseDown(object sender, MouseEventArgs e)
+        {
+            // function to begin drag drop & capture tag data to be used as input when dropped
+            DataObject data = new DataObject("coinTag", pbOnePound.Tag);
+            pbOnePound.DoDragDrop(data, DragDropEffects.Copy);
+        }
+
+        private void pbTwoPound_MouseDown(object sender, MouseEventArgs e)
+        {
+            // function to begin drag drop & capture tag data to be used as input when dropped.
+            DataObject data = new DataObject("coinTag", pbTwoPound.Tag);
+            pbTwoPound.DoDragDrop(data, DragDropEffects.Copy);
+        }
+
+        private void pbFivePound_MouseDown(object sender, MouseEventArgs e)
+        {
+            // // function to begin drag drop & capture tag data to be used as input when dropped
+            DataObject data = new DataObject("coinTag", pbFivePound.Tag);
+            pbFivePound.DoDragDrop(data, DragDropEffects.Copy);
+        }
+
+        private void pbCoinSlot_DragEnter(object sender, DragEventArgs e)
+        {
+
+                e.Effect = DragDropEffects.Copy;
+            
+        }
+
+        private void resetForm()
+        {
+            // reset the text box to
             txtBoxTotalCost.Text = "0.00";
             OrderDisplayBox.Items.Clear();
 
+            // enable all buttons.
             btnDrinkOne.Enabled = true;
             btnDrinkTwo.Enabled = true;
             btnDrinkThree.Enabled = true;
@@ -595,44 +697,96 @@ namespace WindowsFormsApp3
             btnCrispTwo.Enabled = true;
             btnCrispThree.Enabled = true;
 
+            // disable all the buttons in group 1 or "Money secontion"
             groupBox1.Visible = false;
-
         }
 
-        private void OrderDisplayBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void changeCheck()
+            // function to be called to check if change is owed after each coin is used.
         {
-
-        }
-
-        
-
-        private void btnPayNow_Click(object sender, EventArgs e)
-        {
-            groupBox1.Visible = true;
-
-            btnDrinkOne.Enabled = false;
-            btnDrinkTwo.Enabled = false;
-            btnDrinkThree.Enabled = false;
-            btnDrinkFour.Enabled = false;
-            btnDrinkFive.Enabled = false;
-            btnDrinkSix.Enabled = false;
-            btnChocoOne.Enabled = false;
-            btnChocoTwo.Enabled = false;
-            btnChocoThree.Enabled = false;
-            btnCrispOne.Enabled = false;
-            btnCrispTwo.Enabled = false;
-            btnCrispThree.Enabled = false;
+            // checks if the textbox is less than 0.
+            if (double.Parse(txtBoxTotalCost.Text) < 0)
+            {
+                
+                double change = 0 - double.Parse(txtBoxTotalCost.Text);
+                // creates a message box to display the change owed.
+                MessageBox.Show("Thank you. Your Change is: £" + string.Format("{0:0.00}", change));
+                // reset form once the messagebox is dismissed.
+                resetForm();
+                
+            }
+            else
+                if
+                (double.Parse(txtBoxTotalCost.Text) == 0)
+            {
+                // displays a message box to confirm successful payment with no change to be given.
+                MessageBox.Show("Payment Complete. Thank You");
+                // reset the form once the messagebox is dismissed.
+                resetForm();
+            }
         }
 
         private void pbCoinSlot_DragDrop(object sender, DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(DataFormats.Bitmap))
+            // create an object and set it equal to the data obtained from the dropped image tag.
+            object imageSelected = e.Data.GetData("coinTag");
+            
+            // cast the object data to a string.
+            string match = imageSelected.ToString();
+
+            // switch statement for calculation logic.
+            switch (match)
             {
-                Image imageUsed = (Image)e.Data.GetData(DataFormats.Bitmap);
-                string checkTag = imageUsed.Tag as string;
-                // these changes 
+                case "0.05":
+
+                    double tempStore = double.Parse(txtBoxTotalCost.Text) - 0.05;
+                    txtBoxTotalCost.Text = tempStore.ToString();
+                    changeCheck();
+                    return;
+
+                case "0.10":
+                    tempStore = double.Parse(txtBoxTotalCost.Text) - 0.10;
+                    txtBoxTotalCost.Text = tempStore.ToString();
+                    changeCheck();
+                    return;
+
+                case "0.20":
+                    tempStore = double.Parse(txtBoxTotalCost.Text) - 0.2;
+                    txtBoxTotalCost.Text = tempStore.ToString();
+                    changeCheck();
+                    return;
+
+                case "0.50":
+                    tempStore = double.Parse(txtBoxTotalCost.Text) - 0.5;
+                    txtBoxTotalCost.Text = tempStore.ToString();
+                    changeCheck();
+                    return;
+
+                case "1":
+                    tempStore = double.Parse(txtBoxTotalCost.Text) - 1;
+                    txtBoxTotalCost.Text = tempStore.ToString();
+                    changeCheck();
+                    return;
+
+                case "2":
+                    tempStore = double.Parse(txtBoxTotalCost.Text) - 2;
+                    txtBoxTotalCost.Text = tempStore.ToString();
+                    changeCheck();
+                    return;
+
+                case "5":
+                    tempStore = double.Parse(txtBoxTotalCost.Text) - 5;
+                    txtBoxTotalCost.Text = tempStore.ToString();
+                    changeCheck();
+                    return;
             }
+
+
+           
+
         }
+
+        
     }
 
 }
