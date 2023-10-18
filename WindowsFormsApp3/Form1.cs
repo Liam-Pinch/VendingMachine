@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using static System.Net.Mime.MediaTypeNames;
+using System.IO;
+using System.Linq.Expressions;
 
 namespace WindowsFormsApp3
 {
@@ -163,6 +165,7 @@ namespace WindowsFormsApp3
             if (txtBoxTotalCost.Text == "0.00")
             {
                 txtBoxTotalCost.Text = tbPriceThree.Text;
+                OrderDisplayBox.Items.Add(lblBtnThree.Text + "        " + (counter + 1));
             }
             else
             {
@@ -206,7 +209,8 @@ namespace WindowsFormsApp3
 
             if (txtBoxTotalCost.Text == "0.00")
             {
-                txtBoxTotalCost.Text = tbPriceFour.Text;
+                txtBoxTotalCost.Text = tbPriceTwo.Text;
+                OrderDisplayBox.Items.Add(lblBtnTwo.Text + "        " + (counter + 1));
             }
             else
             {
@@ -296,7 +300,7 @@ namespace WindowsFormsApp3
             if (txtBoxTotalCost.Text == "0.00")
             {
                 txtBoxTotalCost.Text = tbPriceSix.Text;
-                OrderDisplayBox.Items.Add(lblBtnFive.Text + "        " + (counter + 1));
+                OrderDisplayBox.Items.Add(lblBtnSix.Text + "        " + (counter + 1));
             }
             else
             {
@@ -341,6 +345,7 @@ namespace WindowsFormsApp3
             if (txtBoxTotalCost.Text == "0.00")
             {
                 txtBoxTotalCost.Text = tbPriceSeven.Text;
+                OrderDisplayBox.Items.Add(lblBtnSeven.Text + "        " + (counter + 1));
             }
             else
             {
@@ -385,6 +390,7 @@ namespace WindowsFormsApp3
             if (txtBoxTotalCost.Text == "0.00")
             {
                 txtBoxTotalCost.Text = tbPriceEight.Text;
+                OrderDisplayBox.Items.Add(lblBtnEight.Text + "        " +(counter + 1));
             }
             else
             {
@@ -711,6 +717,7 @@ namespace WindowsFormsApp3
                 double change = 0 - double.Parse(txtBoxTotalCost.Text);
                 // creates a message box to display the change owed.
                 MessageBox.Show("Thank you. Your Change is: £" + string.Format("{0:0.00}", change));
+                writeToFile();
                 // reset form once the messagebox is dismissed.
                 resetForm();
                 
@@ -721,6 +728,8 @@ namespace WindowsFormsApp3
             {
                 // displays a message box to confirm successful payment with no change to be given.
                 MessageBox.Show("Payment Complete. Thank You");
+                // write to file.
+                writeToFile();
                 // reset the form once the messagebox is dismissed.
                 resetForm();
             }
@@ -786,7 +795,34 @@ namespace WindowsFormsApp3
 
         }
 
-        
+        private void writeToFile()
+        {
+            // variable to store file path of the textfile.
+            string filePath = @"C:\Users\liamp\OneDrive - University of South Wales\repos\vendingmachine.txt";
+
+            try
+            {
+                // write the list to the file.
+                using (StreamWriter writer = new StreamWriter(filePath, true))
+                {
+                    foreach (var item in OrderDisplayBox.Items)
+                    {
+                        writer.WriteLine(item);
+                    }
+                    writer.Write("\n");
+                    
+                    
+                }
+                
+            }
+            // catch statement to handle exceptions.
+            catch (IOException e)
+            {
+                MessageBox.Show("Unable to Write to file" + e);
+            }
+        }
     }
+
+    
 
 }
