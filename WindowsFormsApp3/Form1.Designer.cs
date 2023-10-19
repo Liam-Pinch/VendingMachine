@@ -349,11 +349,11 @@
             // txtBoxTotalCost
             // 
             this.txtBoxTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxTotalCost.Location = new System.Drawing.Point(711, 270);
+            this.txtBoxTotalCost.Location = new System.Drawing.Point(711, 290);
             this.txtBoxTotalCost.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxTotalCost.Multiline = true;
             this.txtBoxTotalCost.Name = "txtBoxTotalCost";
-            this.txtBoxTotalCost.Size = new System.Drawing.Size(155, 55);
+            this.txtBoxTotalCost.Size = new System.Drawing.Size(155, 35);
             this.txtBoxTotalCost.TabIndex = 37;
             this.txtBoxTotalCost.Text = "0.00";
             this.txtBoxTotalCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -610,7 +610,7 @@
             // 
             // txtBoxLastAction
             // 
-            this.txtBoxLastAction.Location = new System.Drawing.Point(873, 298);
+            this.txtBoxLastAction.Location = new System.Drawing.Point(881, 298);
             this.txtBoxLastAction.Name = "txtBoxLastAction";
             this.txtBoxLastAction.Size = new System.Drawing.Size(200, 22);
             this.txtBoxLastAction.TabIndex = 59;
@@ -619,6 +619,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1359, 869);
             this.Controls.Add(this.txtBoxLastAction);
             this.Controls.Add(this.btnPayNow);
@@ -665,7 +666,7 @@
             this.Controls.Add(this.btnDrinkOne);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "30061664";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCoinSlot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFivePence)).EndInit();

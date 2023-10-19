@@ -21,8 +21,7 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
             pbCoinSlot.AllowDrop = true;
-            
-
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -644,50 +643,44 @@ namespace WindowsFormsApp3
         private void pbFivePence_MouseDown(object sender, MouseEventArgs e)
         {
             // function to begin drag drop & capture tag data to be used as input when dropped
-            DataObject data = new DataObject("coinTag", pbFivePence.Tag);
-            pbFivePence.DoDragDrop(data, DragDropEffects.Copy);
+            // DataObject data = new DataObject("coinTag", pbFivePence.Tag);
+            pbFivePence.DoDragDrop(pbFivePence.Tag, DragDropEffects.Copy);
         }
 
         private void pbTenPence_MouseDown(object sender, MouseEventArgs e)
         {
             // function to begin drag drop & capture tag data to be used as input when dropped
-            DataObject data = new DataObject("coinTag", pbTenPence.Tag);
-            pbTenPence.DoDragDrop(data, DragDropEffects.Copy);
+            pbFivePence.DoDragDrop(pbTenPence.Tag, DragDropEffects.Copy);
         }
 
         private void pbTwentyPence_MouseDown(object sender, MouseEventArgs e)
         {
             // function to begin drag drop & capture tag data to be used as input when dropped
-            DataObject data = new DataObject("coinTag", pbTwentyPence.Tag);
-            pbTwentyPence.DoDragDrop(data, DragDropEffects.Copy);
+            pbFivePence.DoDragDrop(pbTwentyPence.Tag, DragDropEffects.Copy);
         }
 
         private void pbFiftyPence_MouseDown(object sender, MouseEventArgs e)
         {
             // function to begin drag drop & capture tag data to be used as input when dropped
-            DataObject data = new DataObject("coinTag", pbFiftyPence.Tag);
-            pbFiftyPence.DoDragDrop(data, DragDropEffects.Copy);
+            pbFivePence.DoDragDrop(pbFiftyPence.Tag, DragDropEffects.Copy);
         }
 
         private void pbOnePound_MouseDown(object sender, MouseEventArgs e)
         {
             // function to begin drag drop & capture tag data to be used as input when dropped
-            DataObject data = new DataObject("coinTag", pbOnePound.Tag);
-            pbOnePound.DoDragDrop(data, DragDropEffects.Copy);
+            pbFivePence.DoDragDrop(pbOnePound.Tag, DragDropEffects.Copy);
         }
 
         private void pbTwoPound_MouseDown(object sender, MouseEventArgs e)
         {
             // function to begin drag drop & capture tag data to be used as input when dropped.
-            DataObject data = new DataObject("coinTag", pbTwoPound.Tag);
-            pbTwoPound.DoDragDrop(data, DragDropEffects.Copy);
+            pbFivePence.DoDragDrop(pbTwoPound.Tag, DragDropEffects.Copy);
         }
 
         private void pbFivePound_MouseDown(object sender, MouseEventArgs e)
         {
             // // function to begin drag drop & capture tag data to be used as input when dropped
-            DataObject data = new DataObject("coinTag", pbFivePound.Tag);
-            pbFivePound.DoDragDrop(data, DragDropEffects.Copy);
+            pbFivePence.DoDragDrop(pbFivePound.Tag, DragDropEffects.Copy);
         }
 
         private void pbCoinSlot_DragEnter(object sender, DragEventArgs e)
@@ -753,14 +746,11 @@ namespace WindowsFormsApp3
 
         private void pbCoinSlot_DragDrop(object sender, DragEventArgs e)
         {
-            // create an object and set it equal to the data obtained from the dropped image tag.
-            object imageSelected = e.Data.GetData("coinTag");
             
-            // cast the object data to a string.
-            string match = imageSelected.ToString();
-
-            // switch statement for calculation logic.
-            switch (match)
+            
+            string tag = e.Data.GetData(typeof(string)) as string;
+            
+            switch (tag)
             {
                 case "0.05":
 
