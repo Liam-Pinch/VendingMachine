@@ -79,6 +79,7 @@
             this.pbFivePound = new System.Windows.Forms.PictureBox();
             this.pbTwoPound = new System.Windows.Forms.PictureBox();
             this.btnPayNow = new System.Windows.Forms.Button();
+            this.txtBoxLastAction = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoinSlot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFivePence)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTenPence)).BeginInit();
@@ -476,12 +477,13 @@
             // pbCoinSlot
             // 
             this.pbCoinSlot.Image = ((System.Drawing.Image)(resources.GetObject("pbCoinSlot.Image")));
-            this.pbCoinSlot.Location = new System.Drawing.Point(956, 55);
+            this.pbCoinSlot.Location = new System.Drawing.Point(959, 55);
             this.pbCoinSlot.Name = "pbCoinSlot";
             this.pbCoinSlot.Size = new System.Drawing.Size(200, 200);
             this.pbCoinSlot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbCoinSlot.TabIndex = 57;
             this.pbCoinSlot.TabStop = false;
+            this.pbCoinSlot.Visible = false;
             this.pbCoinSlot.DragDrop += new System.Windows.Forms.DragEventHandler(this.pbCoinSlot_DragDrop);
             this.pbCoinSlot.DragEnter += new System.Windows.Forms.DragEventHandler(this.pbCoinSlot_DragEnter);
             // 
@@ -606,11 +608,19 @@
             this.btnPayNow.UseVisualStyleBackColor = true;
             this.btnPayNow.Click += new System.EventHandler(this.btnPayNow_Click);
             // 
+            // txtBoxLastAction
+            // 
+            this.txtBoxLastAction.Location = new System.Drawing.Point(873, 298);
+            this.txtBoxLastAction.Name = "txtBoxLastAction";
+            this.txtBoxLastAction.Size = new System.Drawing.Size(200, 22);
+            this.txtBoxLastAction.TabIndex = 59;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1359, 869);
+            this.Controls.Add(this.txtBoxLastAction);
             this.Controls.Add(this.btnPayNow);
             this.Controls.Add(this.pbCoinSlot);
             this.Controls.Add(this.groupBox1);
@@ -725,6 +735,7 @@
         private System.Windows.Forms.Button btnPayNow;
         private System.Windows.Forms.PictureBox pbFivePound;
         private System.Windows.Forms.PictureBox pbTwoPound;
+        private System.Windows.Forms.TextBox txtBoxLastAction;
     }
 }
 

@@ -21,7 +21,7 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
             pbCoinSlot.AllowDrop = true;
-
+            
 
         }
 
@@ -55,6 +55,8 @@ namespace WindowsFormsApp3
 
         private void btnDrinkOne_Click(object sender, EventArgs e)
         {
+            txtBoxLastAction.Text = lblBtnOne.Text;
+
             // variable to count how many items have been added on this purchase.
             int counter = 0;
 
@@ -103,6 +105,7 @@ namespace WindowsFormsApp3
 
         private void btnDrinkTwo_Click(object sender, EventArgs e)
         {
+            txtBoxLastAction.Text = lblBtnTwo.Text;
             // variable to count how many items have been added on this purchase.
             int counter = 0;
 
@@ -147,6 +150,7 @@ namespace WindowsFormsApp3
 
         private void btnDrinkThree_Click(object sender, EventArgs e)
         {
+            txtBoxLastAction.Text = lblBtnThree.Text;
             // variable to count how many items have been added on this purchase.
             int counter = 0;
 
@@ -189,6 +193,7 @@ namespace WindowsFormsApp3
 
         private void btnDrinkFour_Click(object sender, EventArgs e)
         {
+            txtBoxLastAction.Text = lblBtnFour.Text;
             // variable to count how many items have been added on this purchase.
             int counter = 0;
 
@@ -234,6 +239,7 @@ namespace WindowsFormsApp3
 
         private void btnDrinkFive_Click(object sender, EventArgs e)
         {
+            txtBoxLastAction.Text = lblBtnFive.Text;
             // variable to count how many items have been added on this purchase.
             int counter = 0;
 
@@ -279,6 +285,7 @@ namespace WindowsFormsApp3
 
         private void btnDrinkSix_Click(object sender, EventArgs e)
         {
+            txtBoxLastAction.Text = lblBtnSix.Text;
             // variable to count how many items have been added on this purchase.
             int counter = 0;
 
@@ -324,6 +331,7 @@ namespace WindowsFormsApp3
 
         private void btnChocoOne_Click(object sender, EventArgs e)
         {
+            txtBoxLastAction.Text = lblBtnSeven.Text;
             // variable to count how many items have been added on this purchase.
             int counter = 0;
 
@@ -369,6 +377,7 @@ namespace WindowsFormsApp3
 
         private void btnChocoTwo_Click(object sender, EventArgs e)
         {
+            txtBoxLastAction.Text = lblBtnEight.Text;
             // variable to count how many items have been added on this purchase.
             int counter = 0;
 
@@ -414,6 +423,7 @@ namespace WindowsFormsApp3
 
         private void btnChocoThree_Click(object sender, EventArgs e)
         {
+            txtBoxLastAction.Text = lblBtnNine.Text;
             // variable to count how many items have been added on this purchase.
             int counter = 0;
 
@@ -458,6 +468,7 @@ namespace WindowsFormsApp3
 
         private void btnChrispOne_Click(object sender, EventArgs e)
         {
+            txtBoxLastAction.Text = lblBtnTen.Text;
             // variable to count how many items have been added on this purchase.
             int counter = 0;
 
@@ -502,6 +513,7 @@ namespace WindowsFormsApp3
 
         private void btnCrispTwo_Click(object sender, EventArgs e)
         {
+            txtBoxLastAction.Text = lblBtnEleven.Text;
             // variable to count how many items have been added on this purchase.
             int counter = 0;
 
@@ -546,6 +558,7 @@ namespace WindowsFormsApp3
 
         private void btnCrispThree_Click(object sender, EventArgs e)
         {
+            txtBoxLastAction.Text = lblBtnTwelve.Text;
             // variable to count how many items have been added on this purchase.
             int counter = 0;
 
@@ -608,6 +621,7 @@ namespace WindowsFormsApp3
             if (double.Parse(txtBoxTotalCost.Text) != 0)
             {
                 groupBox1.Visible = true;
+                pbCoinSlot.Visible = true;
 
                 btnDrinkOne.Enabled = false;
                 btnDrinkTwo.Enabled = false;
@@ -685,9 +699,10 @@ namespace WindowsFormsApp3
 
         private void resetForm()
         {
-            // reset the text box to
+            // reset the text boxes
             txtBoxTotalCost.Text = "0.00";
             OrderDisplayBox.Items.Clear();
+            txtBoxLastAction.Text = "";
 
             // enable all buttons.
             btnDrinkOne.Enabled = true;
@@ -705,6 +720,7 @@ namespace WindowsFormsApp3
 
             // disable all the buttons in group 1 or "Money secontion"
             groupBox1.Visible = false;
+            pbCoinSlot.Visible = false;
         }
 
         private void changeCheck()
@@ -821,6 +837,9 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Unable to Write to file" + e);
             }
         }
+          
+        
+        
     }
 
     
