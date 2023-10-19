@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 using static System.Net.Mime.MediaTypeNames;
 using System.IO;
 using System.Linq.Expressions;
+using System.Reflection;
 
 namespace WindowsFormsApp3
 {
@@ -28,6 +29,7 @@ namespace WindowsFormsApp3
         {
 
         }
+
 
         private void tbPriceThree_TextChanged(object sender, EventArgs e)
         {
@@ -52,10 +54,158 @@ namespace WindowsFormsApp3
 
         }
 
-        private void btnDrinkOne_Click(object sender, EventArgs e)
+        private void productSelect_Click(object sender, EventArgs e)
         {
-            txtBoxLastAction.Text = lblBtnOne.Text;
+            Button button = sender as Button;
 
+            string btnPressed = button.Tag as string;
+
+            switch (btnPressed)
+            {
+                case "Coca-Cola Original":
+
+                    addItem(btnPressed);
+                    return;
+
+                case "Sprite":
+                    addItem(btnPressed);
+                    return;
+
+                case "Mountain Dew":
+                    addItem(btnPressed);
+                    return;
+
+                case "Pepsi":
+                    addItem(btnPressed);
+                    return;
+
+                case "Monster":
+                    addItem(btnPressed);
+                    return;
+
+                case "Redbull":
+                    addItem(btnPressed);
+                    return;
+
+                case "Milkyway":
+                    addItem(btnPressed);
+                    return;
+
+                case "KitKat":
+                    addItem(btnPressed);
+                    return;
+
+                case "M&M":
+                    addItem(btnPressed);
+                    return;
+
+                case "Doritos":
+                    addItem(btnPressed);
+                    return;
+
+                case "Cheetos":
+                    addItem(btnPressed);
+                    return;
+
+                case "Takis":
+                    addItem(btnPressed);
+                    return;
+
+            }
+
+
+        }
+        private void addItem(string P)
+        {
+
+            txtBoxLastAction.Text = P;
+
+
+
+
+            switch (P)
+            {
+                case "Coca-Cola Original":
+                    OrderBoxUpdate(P);
+                    double tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceOne.Text);
+                    txtBoxTotalCost.Text = tempTotal.ToString();
+                    return;
+
+                case "Sprite":
+                    OrderBoxUpdate(P);
+                    tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceTwo.Text);
+                    txtBoxTotalCost.Text = tempTotal.ToString();
+                    return;
+
+                case "Mountain Dew":
+                    OrderBoxUpdate(P);
+                    tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceThree.Text);
+                    txtBoxTotalCost.Text = tempTotal.ToString();
+                    return;
+
+                case "Pepsi":
+                    OrderBoxUpdate(P);
+                    tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceFour.Text);
+                    txtBoxTotalCost.Text = tempTotal.ToString();
+                    return;
+
+                case "Monster":
+                    OrderBoxUpdate(P);
+                    tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceFive.Text);
+                    txtBoxTotalCost.Text = tempTotal.ToString();
+                    return;
+
+                case "Redbull":
+                    OrderBoxUpdate(P);
+                    tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceSix.Text);
+                    txtBoxTotalCost.Text = tempTotal.ToString();
+                    return;
+
+                case "Milkyway":
+                    OrderBoxUpdate(P);
+                    tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceSeven.Text);
+                    txtBoxTotalCost.Text = tempTotal.ToString();
+                    return;
+
+                case "KitKat":
+                    OrderBoxUpdate(P);
+                    tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceEight.Text);
+                    txtBoxTotalCost.Text = tempTotal.ToString();
+                    return;
+
+                case "M&M":
+                    OrderBoxUpdate(P);
+                    tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceNine.Text);
+                    txtBoxTotalCost.Text = tempTotal.ToString();
+                    return;
+
+                case "Doritos":
+                    OrderBoxUpdate(P);
+                    tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceTen.Text);
+                    txtBoxTotalCost.Text = tempTotal.ToString();
+                    return;
+
+                case "Cheetos":
+                    OrderBoxUpdate(P);
+                    tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceEleven.Text);
+                    txtBoxTotalCost.Text = tempTotal.ToString();
+                    return;
+
+                case "Takis":
+                    OrderBoxUpdate(P);
+                    tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceTwelve.Text);
+                    txtBoxTotalCost.Text = tempTotal.ToString();
+                    return;
+
+
+
+            }
+
+
+        }
+
+        private void OrderBoxUpdate(string P)
+        {
             // variable to count how many items have been added on this purchase.
             int counter = 0;
 
@@ -65,144 +215,7 @@ namespace WindowsFormsApp3
                 string tempString = item.ToString();
 
                 // counter becomes equal to the number returned from the string.
-                if (tempString.Contains(lblBtnOne.Text))
-                {
-                    counter = 0;
-                    counter = StringSeach(tempString);
-
-                }
-                
-            }
-            
-            //check if the current total is 0.
-            if (txtBoxTotalCost.Text == "0.00")
-            {
-                // changes the text in the text box to display the price if first item selected.
-                txtBoxTotalCost.Text = tbPriceOne.Text;
-                OrderDisplayBox.Items.Add(lblBtnOne.Text + "        " + (counter + 1));
-
-            }
-            else
-            {
-                // converts the txtBoxTotalCost text box and price taken from textbox assossiated with button one. Sums and displays value.
-                double temparyTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceOne.Text);
-                // converts cost back to string and displays in the total cost box.
-                txtBoxTotalCost.Text = temparyTotal.ToString();
-
-                // for loop to loop over each item in the listBox and removing duplicated results.
-                for (int i = 0; i < OrderDisplayBox.Items.Count; i++)
-                {
-                    if (OrderDisplayBox.Items[i].ToString().Contains(lblBtnOne.Text))
-                    {
-                        OrderDisplayBox.Items.RemoveAt(i);
-                    }
-                }
-                // adds the item back to the listbox with the number of items added.
-                OrderDisplayBox.Items.Add(lblBtnOne.Text + "        " + (counter + 1));
-            }
-        }
-
-        private void btnDrinkTwo_Click(object sender, EventArgs e)
-        {
-            txtBoxLastAction.Text = lblBtnTwo.Text;
-            // variable to count how many items have been added on this purchase.
-            int counter = 0;
-
-            // loop over each item in list box and store in a tempory string.
-            foreach (var item in OrderDisplayBox.Items)
-            {
-                string tempString = item.ToString();
-
-                // counter becomes equal to the number returned from the string.
-                if (tempString.Contains(lblBtnTwo.Text))
-                {
-                    counter = 0;
-                    counter = StringSeach(tempString);
-                }
-            }
-
-            if (txtBoxTotalCost.Text == "0.00")
-            {
-                txtBoxTotalCost.Text = tbPriceTwo.Text;
-                OrderDisplayBox.Items.Add(lblBtnTwo.Text + "        " + (counter + 1));
-            }
-            else
-            {
-                // converts the txtBoxTotalCost text box and price taken from textbox assossiated with button one. Sums and displays value.
-                double temparyTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceTwo.Text);
-                // converts cost back to string and displays in the total cost box.
-                txtBoxTotalCost.Text = temparyTotal.ToString();
-
-                // for loop to loop over each item in the listBox and removing duplicated results.
-                for (int i = 0; i < OrderDisplayBox.Items.Count; i++)
-                {
-                    if (OrderDisplayBox.Items[i].ToString().Contains(lblBtnTwo.Text))
-                    {
-                        OrderDisplayBox.Items.RemoveAt(i);
-                    }
-                }
-                // adds the item back to the listbox with the number of items added.
-                OrderDisplayBox.Items.Add(lblBtnTwo.Text + "        " + (counter + 1));
-            }
-
-        }
-
-        private void btnDrinkThree_Click(object sender, EventArgs e)
-        {
-            txtBoxLastAction.Text = lblBtnThree.Text;
-            // variable to count how many items have been added on this purchase.
-            int counter = 0;
-
-            foreach (var item in OrderDisplayBox.Items)
-            {
-                string tempString = item.ToString();
-
-                // counter becomes equal to the number returned from the string.
-                if (tempString.Contains(lblBtnThree.Text))
-                {
-                    counter = 0;
-                    counter = StringSeach(tempString);
-                }
-            }
-
-            if (txtBoxTotalCost.Text == "0.00")
-            {
-                txtBoxTotalCost.Text = tbPriceThree.Text;
-                OrderDisplayBox.Items.Add(lblBtnThree.Text + "        " + (counter + 1));
-            }
-            else
-            {
-                // converts the txtBoxTotalCost text box and price taken from textbox assossiated with button one. Sums and displays value.
-                double temparyTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceThree.Text);
-                // converts cost back to string and displays in the total cost box.
-                txtBoxTotalCost.Text = temparyTotal.ToString();
-
-                // for loop to loop over each item in the listBox and removing duplicated results.
-                for (int i = 0; i < OrderDisplayBox.Items.Count; i++)
-                {
-                    if (OrderDisplayBox.Items[i].ToString().Contains(lblBtnThree.Text))
-                    {
-                        OrderDisplayBox.Items.RemoveAt(i);
-                    }
-                }
-                // adds the item back to the listbox with the number of items added.
-                OrderDisplayBox.Items.Add(lblBtnThree.Text + "        " + (counter + 1));
-            }
-        }
-
-        private void btnDrinkFour_Click(object sender, EventArgs e)
-        {
-            txtBoxLastAction.Text = lblBtnFour.Text;
-            // variable to count how many items have been added on this purchase.
-            int counter = 0;
-
-            // loop over each item in list box and store in a tempory string.
-            foreach (var item in OrderDisplayBox.Items)
-            {
-                string tempString = item.ToString();
-
-                // counter becomes equal to the number returned from the string.
-                if (tempString.Contains(lblBtnFour.Text))
+                if (tempString.Contains(P))
                 {
                     counter = 0;
                     counter = StringSeach(tempString);
@@ -210,396 +223,16 @@ namespace WindowsFormsApp3
                 }
 
             }
-
-            if (txtBoxTotalCost.Text == "0.00")
+            for (int i = 0; i < OrderDisplayBox.Items.Count; i++)
             {
-                txtBoxTotalCost.Text = tbPriceTwo.Text;
-                OrderDisplayBox.Items.Add(lblBtnTwo.Text + "        " + (counter + 1));
-            }
-            else
-            {
-                // converts the txtBoxTotalCost text box and price taken from textbox assossiated with button one. Sums and displays value.
-                double temparyTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceFour.Text);
-                // converts cost back to string and displays in the total cost box.
-                txtBoxTotalCost.Text = temparyTotal.ToString();
-
-                // for loop to loop over each item in the listBox and removing duplicated results.
-                for (int i = 0; i < OrderDisplayBox.Items.Count; i++)
+                if (OrderDisplayBox.Items[i].ToString().Contains(P))
                 {
-                    if (OrderDisplayBox.Items[i].ToString().Contains(lblBtnFour.Text))
-                    {
-                        OrderDisplayBox.Items.RemoveAt(i);
-                    }
+                    OrderDisplayBox.Items.RemoveAt(i);
                 }
-                // adds the item back to the listbox with the number of items added.
-                OrderDisplayBox.Items.Add(lblBtnFour.Text + "        " + (counter + 1));
             }
+            // adds the item back to the listbox with the number of items added.
+            OrderDisplayBox.Items.Add(P + "        " + (counter + 1));
         }
-
-        private void btnDrinkFive_Click(object sender, EventArgs e)
-        {
-            txtBoxLastAction.Text = lblBtnFive.Text;
-            // variable to count how many items have been added on this purchase.
-            int counter = 0;
-
-            // loop over each item in list box and store in a tempory string.
-            foreach (var item in OrderDisplayBox.Items)
-            {
-                string tempString = item.ToString();
-
-                // counter becomes equal to the number returned from the string.
-                if (tempString.Contains(lblBtnFive.Text))
-                {
-                    counter = 0;
-                    counter = StringSeach(tempString);
-
-                }
-
-            }
-
-            if (txtBoxTotalCost.Text == "0.00")
-            {
-                txtBoxTotalCost.Text = tbPriceFive.Text;
-                OrderDisplayBox.Items.Add(lblBtnFive.Text + "        " + (counter + 1));
-            }
-            else
-            {
-                // converts the txtBoxTotalCost text box and price taken from textbox assossiated with button one. Sums and displays value.
-                double temparyTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceFive.Text);
-                // converts cost back to string and displays in the total cost box.
-                txtBoxTotalCost.Text = temparyTotal.ToString();
-
-                // for loop to loop over each item in the listBox and removing duplicated results.
-                for (int i = 0; i < OrderDisplayBox.Items.Count; i++)
-                {
-                    if (OrderDisplayBox.Items[i].ToString().Contains(lblBtnFive.Text))
-                    {
-                        OrderDisplayBox.Items.RemoveAt(i);
-                    }
-                }
-                // adds the item back to the listbox with the number of items added.
-                OrderDisplayBox.Items.Add(lblBtnFive.Text + "        " + (counter + 1));
-            }
-        }
-
-        private void btnDrinkSix_Click(object sender, EventArgs e)
-        {
-            txtBoxLastAction.Text = lblBtnSix.Text;
-            // variable to count how many items have been added on this purchase.
-            int counter = 0;
-
-            // loop over each item in list box and store in a tempory string.
-            foreach (var item in OrderDisplayBox.Items)
-            {
-                string tempString = item.ToString();
-
-                // counter becomes equal to the number returned from the string.
-                if (tempString.Contains(lblBtnSix.Text))
-                {
-                    counter = 0;
-                    counter = StringSeach(tempString);
-
-                }
-
-            }
-
-            if (txtBoxTotalCost.Text == "0.00")
-            {
-                txtBoxTotalCost.Text = tbPriceSix.Text;
-                OrderDisplayBox.Items.Add(lblBtnSix.Text + "        " + (counter + 1));
-            }
-            else
-            {
-                // converts the txtBoxTotalCost text box and price taken from textbox assossiated with button one. Sums and displays value.
-                double temparyTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceSix.Text);
-                // converts cost back to string and displays in the total cost box.
-                txtBoxTotalCost.Text = temparyTotal.ToString();
-
-                // for loop to loop over each item in the listBox and removing duplicated results.
-                for (int i = 0; i < OrderDisplayBox.Items.Count; i++)
-                {
-                    if (OrderDisplayBox.Items[i].ToString().Contains(lblBtnSix.Text))
-                    {
-                        OrderDisplayBox.Items.RemoveAt(i);
-                    }
-                }
-                // adds the item back to the listbox with the number of items added.
-                OrderDisplayBox.Items.Add(lblBtnSix.Text + "        " + (counter + 1));
-            }
-        }
-
-        private void btnChocoOne_Click(object sender, EventArgs e)
-        {
-            txtBoxLastAction.Text = lblBtnSeven.Text;
-            // variable to count how many items have been added on this purchase.
-            int counter = 0;
-
-            // loop over each item in list box and store in a tempory string.
-            foreach (var item in OrderDisplayBox.Items)
-            {
-                string tempString = item.ToString();
-
-                // counter becomes equal to the number returned from the string.
-                if (tempString.Contains(lblBtnSeven.Text))
-                {
-                    counter = 0;
-                    counter = StringSeach(tempString);
-
-                }
-
-            }
-
-            if (txtBoxTotalCost.Text == "0.00")
-            {
-                txtBoxTotalCost.Text = tbPriceSeven.Text;
-                OrderDisplayBox.Items.Add(lblBtnSeven.Text + "        " + (counter + 1));
-            }
-            else
-            {
-                // converts the txtBoxTotalCost text box and price taken from textbox assossiated with button one. Sums and displays value.
-                double temparyTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceSeven.Text);
-                // converts cost back to string and displays in the total cost box.
-                txtBoxTotalCost.Text = temparyTotal.ToString();
-
-                // for loop to loop over each item in the listBox and removing duplicated results.
-                for (int i = 0; i < OrderDisplayBox.Items.Count; i++)
-                {
-                    if (OrderDisplayBox.Items[i].ToString().Contains(lblBtnSeven.Text))
-                    {
-                        OrderDisplayBox.Items.RemoveAt(i);
-                    }
-                }
-                // adds the item back to the listbox with the number of items added.
-                OrderDisplayBox.Items.Add(lblBtnSeven.Text + "        " + (counter + 1));
-            }
-        }
-
-        private void btnChocoTwo_Click(object sender, EventArgs e)
-        {
-            txtBoxLastAction.Text = lblBtnEight.Text;
-            // variable to count how many items have been added on this purchase.
-            int counter = 0;
-
-            // loop over each item in list box and store in a tempory string.
-            foreach (var item in OrderDisplayBox.Items)
-            {
-                string tempString = item.ToString();
-
-                // counter becomes equal to the number returned from the string.
-                if (tempString.Contains(lblBtnEight.Text))
-                {
-                    counter = 0;
-                    counter = StringSeach(tempString);
-
-                }
-
-            }
-
-            if (txtBoxTotalCost.Text == "0.00")
-            {
-                txtBoxTotalCost.Text = tbPriceEight.Text;
-                OrderDisplayBox.Items.Add(lblBtnEight.Text + "        " +(counter + 1));
-            }
-            else
-            {
-                // converts the txtBoxTotalCost text box and price taken from textbox assossiated with button one. Sums and displays value.
-                double temparyTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceEight.Text);
-                // converts cost back to string and displays in the total cost box.
-                txtBoxTotalCost.Text = temparyTotal.ToString();
-
-                // for loop to loop over each item in the listBox and removing duplicated results.
-                for (int i = 0; i < OrderDisplayBox.Items.Count; i++)
-                {
-                    if (OrderDisplayBox.Items[i].ToString().Contains(lblBtnEight.Text))
-                    {
-                        OrderDisplayBox.Items.RemoveAt(i);
-                    }
-                }
-                // adds the item back to the listbox with the number of items added.
-                OrderDisplayBox.Items.Add(lblBtnEight.Text + "        " + (counter + 1));
-            }
-        }
-
-        private void btnChocoThree_Click(object sender, EventArgs e)
-        {
-            txtBoxLastAction.Text = lblBtnNine.Text;
-            // variable to count how many items have been added on this purchase.
-            int counter = 0;
-
-            // loop over each item in list box and store in a tempory string.
-            foreach (var item in OrderDisplayBox.Items)
-            {
-                string tempString = item.ToString();
-
-                // counter becomes equal to the number returned from the string.
-                if (tempString.Contains(lblBtnNine.Text))
-                {
-                    counter = 0;
-                    counter = StringSeach(tempString);
-
-                }
-
-            }
-
-            if (txtBoxTotalCost.Text == "0.00")
-            {
-                txtBoxTotalCost.Text = tbPriceNine.Text;
-            }
-            else
-            {
-                // converts the txtBoxTotalCost text box and price taken from textbox assossiated with button one. Sums and displays value.
-                double temparyTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceNine.Text);
-                // converts cost back to string and displays in the total cost box.
-                txtBoxTotalCost.Text = temparyTotal.ToString();
-
-                // for loop to loop over each item in the listBox and removing duplicated results.
-                for (int i = 0; i < OrderDisplayBox.Items.Count; i++)
-                {
-                    if (OrderDisplayBox.Items[i].ToString().Contains(lblBtnNine.Text))
-                    {
-                        OrderDisplayBox.Items.RemoveAt(i);
-                    }
-                }
-                // adds the item back to the listbox with the number of items added.
-                OrderDisplayBox.Items.Add(lblBtnNine.Text + "        " + (counter + 1));
-            }
-        }
-
-        private void btnChrispOne_Click(object sender, EventArgs e)
-        {
-            txtBoxLastAction.Text = lblBtnTen.Text;
-            // variable to count how many items have been added on this purchase.
-            int counter = 0;
-
-            // loop over each item in list box and store in a tempory string.
-            foreach (var item in OrderDisplayBox.Items)
-            {
-                string tempString = item.ToString();
-
-                // counter becomes equal to the number returned from the string.
-                if (tempString.Contains(lblBtnTen.Text))
-                {
-                    counter = 0;
-                    counter = StringSeach(tempString);
-
-                }
-
-            }
-
-            if (txtBoxTotalCost.Text == "0.00")
-            {
-                txtBoxTotalCost.Text = tbPriceTen.Text;
-            }
-            else
-            {
-                // converts the txtBoxTotalCost text box and price taken from textbox assossiated with button one. Sums and displays value.
-                double temparyTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceTen.Text);
-                // converts cost back to string and displays in the total cost box.
-                txtBoxTotalCost.Text = temparyTotal.ToString();
-
-                // for loop to loop over each item in the listBox and removing duplicated results.
-                for (int i = 0; i < OrderDisplayBox.Items.Count; i++)
-                {
-                    if (OrderDisplayBox.Items[i].ToString().Contains(lblBtnTen.Text))
-                    {
-                        OrderDisplayBox.Items.RemoveAt(i);
-                    }
-                }
-                // adds the item back to the listbox with the number of items added.
-                OrderDisplayBox.Items.Add(lblBtnTen.Text + "        " + (counter + 1));
-            }
-        }
-
-        private void btnCrispTwo_Click(object sender, EventArgs e)
-        {
-            txtBoxLastAction.Text = lblBtnEleven.Text;
-            // variable to count how many items have been added on this purchase.
-            int counter = 0;
-
-            // loop over each item in list box and store in a tempory string.
-            foreach (var item in OrderDisplayBox.Items)
-            {
-                string tempString = item.ToString();
-
-                // counter becomes equal to the number returned from the string.
-                if (tempString.Contains(lblBtnEleven.Text))
-                {
-                    counter = 0;
-                    counter = StringSeach(tempString);
-
-                }
-
-            }
-
-            if (txtBoxTotalCost.Text == "0.00")
-            {
-                txtBoxTotalCost.Text = tbPriceEleven.Text;
-            }
-            else
-            {
-                // converts the txtBoxTotalCost text box and price taken from textbox assossiated with button one. Sums and displays value.
-                double temparyTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceEleven.Text);
-                // converts cost back to string and displays in the total cost box.
-                txtBoxTotalCost.Text = temparyTotal.ToString();
-
-                // for loop to loop over each item in the listBox and removing duplicated results.
-                for (int i = 0; i < OrderDisplayBox.Items.Count; i++)
-                {
-                    if (OrderDisplayBox.Items[i].ToString().Contains(lblBtnEleven.Text))
-                    {
-                        OrderDisplayBox.Items.RemoveAt(i);
-                    }
-                }
-                // adds the item back to the listbox with the number of items added.
-                OrderDisplayBox.Items.Add(lblBtnEleven.Text + "        " + (counter + 1));
-            }
-        }
-
-        private void btnCrispThree_Click(object sender, EventArgs e)
-        {
-            txtBoxLastAction.Text = lblBtnTwelve.Text;
-            // variable to count how many items have been added on this purchase.
-            int counter = 0;
-
-            // loop over each item in list box and store in a tempory string.
-            foreach (var item in OrderDisplayBox.Items)
-            {
-                string tempString = item.ToString();
-
-                // counter becomes equal to the number returned from the string.
-                if (tempString.Contains(lblBtnTwelve.Text))
-                {
-                    counter = 0;
-                    counter = StringSeach(tempString);
-
-                }
-
-            }
-
-            if (txtBoxTotalCost.Text == "0.00")
-            {
-                txtBoxTotalCost.Text = tbPriceTwelve.Text;
-            }
-            else
-            {
-                // converts the txtBoxTotalCost text box and price taken from textbox assossiated with button one. Sums and displays value.
-                double temparyTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceTwelve.Text);
-                // converts cost back to string and displays in the total cost box.
-                txtBoxTotalCost.Text = temparyTotal.ToString();
-
-                // for loop to loop over each item in the listBox and removing duplicated results.
-                for (int i = 0; i < OrderDisplayBox.Items.Count; i++)
-                {
-                    if (OrderDisplayBox.Items[i].ToString().Contains(lblBtnTwelve.Text))
-                    {
-                        OrderDisplayBox.Items.RemoveAt(i);
-                    }
-                }
-                // adds the item back to the listbox with the number of items added.
-                OrderDisplayBox.Items.Add(lblBtnTwelve.Text + "        " + (counter + 1));
-            }
-        }
-
         private void btnClear_Click(object sender, EventArgs e)
         {
             // call the reset form function. Disabling the money buttons.
@@ -643,7 +276,6 @@ namespace WindowsFormsApp3
         private void pbFivePence_MouseDown(object sender, MouseEventArgs e)
         {
             // function to begin drag drop & capture tag data to be used as input when dropped
-            // DataObject data = new DataObject("coinTag", pbFivePence.Tag);
             pbFivePence.DoDragDrop(pbFivePence.Tag, DragDropEffects.Copy);
         }
 
@@ -726,6 +358,7 @@ namespace WindowsFormsApp3
                 double change = 0 - double.Parse(txtBoxTotalCost.Text);
                 // creates a message box to display the change owed.
                 MessageBox.Show("Thank you. Your Change is: £" + string.Format("{0:0.00}", change));
+                // write the order to file.
                 writeToFile();
                 // reset form once the messagebox is dismissed.
                 resetForm();
@@ -826,12 +459,11 @@ namespace WindowsFormsApp3
             {
                 MessageBox.Show("Unable to Write to file" + e);
             }
-        }
-          
-        
-        
+        }     
+
+       
+
     }
 
     
-
 }

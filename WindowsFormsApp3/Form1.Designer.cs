@@ -101,8 +101,9 @@
             this.btnDrinkOne.Name = "btnDrinkOne";
             this.btnDrinkOne.Size = new System.Drawing.Size(154, 114);
             this.btnDrinkOne.TabIndex = 0;
+            this.btnDrinkOne.Tag = "Coca-Cola Original";
             this.btnDrinkOne.UseVisualStyleBackColor = true;
-            this.btnDrinkOne.Click += new System.EventHandler(this.btnDrinkOne_Click);
+            this.btnDrinkOne.Click += new System.EventHandler(this.productSelect_Click);
             // 
             // btnDrinkTwo
             // 
@@ -112,8 +113,9 @@
             this.btnDrinkTwo.Name = "btnDrinkTwo";
             this.btnDrinkTwo.Size = new System.Drawing.Size(154, 114);
             this.btnDrinkTwo.TabIndex = 1;
+            this.btnDrinkTwo.Tag = "Sprite";
             this.btnDrinkTwo.UseVisualStyleBackColor = true;
-            this.btnDrinkTwo.Click += new System.EventHandler(this.btnDrinkTwo_Click);
+            this.btnDrinkTwo.Click += new System.EventHandler(this.productSelect_Click);
             // 
             // btnDrinkThree
             // 
@@ -123,8 +125,9 @@
             this.btnDrinkThree.Name = "btnDrinkThree";
             this.btnDrinkThree.Size = new System.Drawing.Size(154, 114);
             this.btnDrinkThree.TabIndex = 2;
+            this.btnDrinkThree.Tag = "Mountain Dew";
             this.btnDrinkThree.UseVisualStyleBackColor = true;
-            this.btnDrinkThree.Click += new System.EventHandler(this.btnDrinkThree_Click);
+            this.btnDrinkThree.Click += new System.EventHandler(this.productSelect_Click);
             // 
             // btnDrinkFour
             // 
@@ -134,8 +137,9 @@
             this.btnDrinkFour.Name = "btnDrinkFour";
             this.btnDrinkFour.Size = new System.Drawing.Size(154, 114);
             this.btnDrinkFour.TabIndex = 3;
+            this.btnDrinkFour.Tag = "Pepsi";
             this.btnDrinkFour.UseVisualStyleBackColor = true;
-            this.btnDrinkFour.Click += new System.EventHandler(this.btnDrinkFour_Click);
+            this.btnDrinkFour.Click += new System.EventHandler(this.productSelect_Click);
             // 
             // btnDrinkFive
             // 
@@ -145,8 +149,9 @@
             this.btnDrinkFive.Name = "btnDrinkFive";
             this.btnDrinkFive.Size = new System.Drawing.Size(154, 114);
             this.btnDrinkFive.TabIndex = 4;
+            this.btnDrinkFive.Tag = "Monster";
             this.btnDrinkFive.UseVisualStyleBackColor = true;
-            this.btnDrinkFive.Click += new System.EventHandler(this.btnDrinkFive_Click);
+            this.btnDrinkFive.Click += new System.EventHandler(this.productSelect_Click);
             // 
             // btnDrinkSix
             // 
@@ -156,8 +161,9 @@
             this.btnDrinkSix.Name = "btnDrinkSix";
             this.btnDrinkSix.Size = new System.Drawing.Size(154, 114);
             this.btnDrinkSix.TabIndex = 5;
+            this.btnDrinkSix.Tag = "Redbull";
             this.btnDrinkSix.UseVisualStyleBackColor = true;
-            this.btnDrinkSix.Click += new System.EventHandler(this.btnDrinkSix_Click);
+            this.btnDrinkSix.Click += new System.EventHandler(this.productSelect_Click);
             // 
             // btnChocoOne
             // 
@@ -167,8 +173,9 @@
             this.btnChocoOne.Name = "btnChocoOne";
             this.btnChocoOne.Size = new System.Drawing.Size(154, 114);
             this.btnChocoOne.TabIndex = 6;
+            this.btnChocoOne.Tag = "Milkyway";
             this.btnChocoOne.UseVisualStyleBackColor = true;
-            this.btnChocoOne.Click += new System.EventHandler(this.btnChocoOne_Click);
+            this.btnChocoOne.Click += new System.EventHandler(this.productSelect_Click);
             // 
             // btnChocoTwo
             // 
@@ -178,8 +185,9 @@
             this.btnChocoTwo.Name = "btnChocoTwo";
             this.btnChocoTwo.Size = new System.Drawing.Size(154, 114);
             this.btnChocoTwo.TabIndex = 7;
+            this.btnChocoTwo.Tag = "KitKat";
             this.btnChocoTwo.UseVisualStyleBackColor = true;
-            this.btnChocoTwo.Click += new System.EventHandler(this.btnChocoTwo_Click);
+            this.btnChocoTwo.Click += new System.EventHandler(this.productSelect_Click);
             // 
             // btnChocoThree
             // 
@@ -189,8 +197,9 @@
             this.btnChocoThree.Name = "btnChocoThree";
             this.btnChocoThree.Size = new System.Drawing.Size(154, 114);
             this.btnChocoThree.TabIndex = 8;
+            this.btnChocoThree.Tag = "M&M";
             this.btnChocoThree.UseVisualStyleBackColor = true;
-            this.btnChocoThree.Click += new System.EventHandler(this.btnChocoThree_Click);
+            this.btnChocoThree.Click += new System.EventHandler(this.productSelect_Click);
             // 
             // btnCrispOne
             // 
@@ -200,8 +209,9 @@
             this.btnCrispOne.Name = "btnCrispOne";
             this.btnCrispOne.Size = new System.Drawing.Size(154, 114);
             this.btnCrispOne.TabIndex = 9;
+            this.btnCrispOne.Tag = "Doritos";
             this.btnCrispOne.UseVisualStyleBackColor = true;
-            this.btnCrispOne.Click += new System.EventHandler(this.btnChrispOne_Click);
+            this.btnCrispOne.Click += new System.EventHandler(this.productSelect_Click);
             // 
             // btnCrispTwo
             // 
@@ -211,8 +221,9 @@
             this.btnCrispTwo.Name = "btnCrispTwo";
             this.btnCrispTwo.Size = new System.Drawing.Size(154, 114);
             this.btnCrispTwo.TabIndex = 10;
+            this.btnCrispTwo.Tag = "Cheetos";
             this.btnCrispTwo.UseVisualStyleBackColor = true;
-            this.btnCrispTwo.Click += new System.EventHandler(this.btnCrispTwo_Click);
+            this.btnCrispTwo.Click += new System.EventHandler(this.productSelect_Click);
             // 
             // btnCrispThree
             // 
@@ -222,8 +233,9 @@
             this.btnCrispThree.Name = "btnCrispThree";
             this.btnCrispThree.Size = new System.Drawing.Size(154, 114);
             this.btnCrispThree.TabIndex = 11;
+            this.btnCrispThree.Tag = "Takis";
             this.btnCrispThree.UseVisualStyleBackColor = true;
-            this.btnCrispThree.Click += new System.EventHandler(this.btnCrispThree_Click);
+            this.btnCrispThree.Click += new System.EventHandler(this.productSelect_Click);
             // 
             // tbPriceOne
             // 
