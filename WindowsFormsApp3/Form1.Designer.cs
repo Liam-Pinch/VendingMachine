@@ -80,6 +80,30 @@
             this.pbTwoPound = new System.Windows.Forms.PictureBox();
             this.btnPayNow = new System.Windows.Forms.Button();
             this.txtBoxLastAction = new System.Windows.Forms.TextBox();
+            this.pbLedOff1 = new System.Windows.Forms.PictureBox();
+            this.pbLedOff2 = new System.Windows.Forms.PictureBox();
+            this.pbLedOff3 = new System.Windows.Forms.PictureBox();
+            this.pbLedOff4 = new System.Windows.Forms.PictureBox();
+            this.pbLedOff5 = new System.Windows.Forms.PictureBox();
+            this.pbLedOff6 = new System.Windows.Forms.PictureBox();
+            this.pbLedOff7 = new System.Windows.Forms.PictureBox();
+            this.pbLedOff8 = new System.Windows.Forms.PictureBox();
+            this.pbLedOff9 = new System.Windows.Forms.PictureBox();
+            this.pbLedOff10 = new System.Windows.Forms.PictureBox();
+            this.pbLedOff11 = new System.Windows.Forms.PictureBox();
+            this.pbLedOff12 = new System.Windows.Forms.PictureBox();
+            this.pbLedON10 = new System.Windows.Forms.PictureBox();
+            this.pbLedON9 = new System.Windows.Forms.PictureBox();
+            this.pbLedON8 = new System.Windows.Forms.PictureBox();
+            this.pbLedON7 = new System.Windows.Forms.PictureBox();
+            this.pbLedON6 = new System.Windows.Forms.PictureBox();
+            this.pbLedON5 = new System.Windows.Forms.PictureBox();
+            this.pbLedON4 = new System.Windows.Forms.PictureBox();
+            this.pbLedON1 = new System.Windows.Forms.PictureBox();
+            this.pbLedON2 = new System.Windows.Forms.PictureBox();
+            this.pbLedON3 = new System.Windows.Forms.PictureBox();
+            this.pbLedON12 = new System.Windows.Forms.PictureBox();
+            this.pbLedON11 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoinSlot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFivePence)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTenPence)).BeginInit();
@@ -90,6 +114,30 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFivePound)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTwoPound)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON11)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDrinkOne
@@ -290,7 +338,7 @@
             // 
             // tbPriceSix
             // 
-            this.tbPriceSix.Location = new System.Drawing.Point(545, 371);
+            this.tbPriceSix.Location = new System.Drawing.Point(545, 374);
             this.tbPriceSix.Margin = new System.Windows.Forms.Padding(4);
             this.tbPriceSix.Name = "tbPriceSix";
             this.tbPriceSix.Size = new System.Drawing.Size(86, 22);
@@ -627,12 +675,288 @@
             this.txtBoxLastAction.Size = new System.Drawing.Size(200, 22);
             this.txtBoxLastAction.TabIndex = 59;
             // 
+            // pbLedOff1
+            // 
+            this.pbLedOff1.Image = ((System.Drawing.Image)(resources.GetObject("pbLedOff1.Image")));
+            this.pbLedOff1.Location = new System.Drawing.Point(108, 181);
+            this.pbLedOff1.Name = "pbLedOff1";
+            this.pbLedOff1.Size = new System.Drawing.Size(22, 18);
+            this.pbLedOff1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedOff1.TabIndex = 60;
+            this.pbLedOff1.TabStop = false;
+            this.pbLedOff1.Tag = "5";
+            // 
+            // pbLedOff2
+            // 
+            this.pbLedOff2.Image = ((System.Drawing.Image)(resources.GetObject("pbLedOff2.Image")));
+            this.pbLedOff2.Location = new System.Drawing.Point(294, 181);
+            this.pbLedOff2.Name = "pbLedOff2";
+            this.pbLedOff2.Size = new System.Drawing.Size(22, 18);
+            this.pbLedOff2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedOff2.TabIndex = 61;
+            this.pbLedOff2.TabStop = false;
+            this.pbLedOff2.Tag = "5";
+            // 
+            // pbLedOff3
+            // 
+            this.pbLedOff3.Image = ((System.Drawing.Image)(resources.GetObject("pbLedOff3.Image")));
+            this.pbLedOff3.Location = new System.Drawing.Point(477, 181);
+            this.pbLedOff3.Name = "pbLedOff3";
+            this.pbLedOff3.Size = new System.Drawing.Size(22, 18);
+            this.pbLedOff3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedOff3.TabIndex = 62;
+            this.pbLedOff3.TabStop = false;
+            this.pbLedOff3.Tag = "5";
+            // 
+            // pbLedOff4
+            // 
+            this.pbLedOff4.Image = ((System.Drawing.Image)(resources.GetObject("pbLedOff4.Image")));
+            this.pbLedOff4.Location = new System.Drawing.Point(108, 378);
+            this.pbLedOff4.Name = "pbLedOff4";
+            this.pbLedOff4.Size = new System.Drawing.Size(22, 18);
+            this.pbLedOff4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedOff4.TabIndex = 63;
+            this.pbLedOff4.TabStop = false;
+            this.pbLedOff4.Tag = "5";
+            // 
+            // pbLedOff5
+            // 
+            this.pbLedOff5.Image = ((System.Drawing.Image)(resources.GetObject("pbLedOff5.Image")));
+            this.pbLedOff5.Location = new System.Drawing.Point(294, 378);
+            this.pbLedOff5.Name = "pbLedOff5";
+            this.pbLedOff5.Size = new System.Drawing.Size(22, 18);
+            this.pbLedOff5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedOff5.TabIndex = 64;
+            this.pbLedOff5.TabStop = false;
+            this.pbLedOff5.Tag = "5";
+            // 
+            // pbLedOff6
+            // 
+            this.pbLedOff6.Image = ((System.Drawing.Image)(resources.GetObject("pbLedOff6.Image")));
+            this.pbLedOff6.Location = new System.Drawing.Point(480, 378);
+            this.pbLedOff6.Name = "pbLedOff6";
+            this.pbLedOff6.Size = new System.Drawing.Size(22, 18);
+            this.pbLedOff6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedOff6.TabIndex = 65;
+            this.pbLedOff6.TabStop = false;
+            this.pbLedOff6.Tag = "5";
+            // 
+            // pbLedOff7
+            // 
+            this.pbLedOff7.Image = ((System.Drawing.Image)(resources.GetObject("pbLedOff7.Image")));
+            this.pbLedOff7.Location = new System.Drawing.Point(108, 558);
+            this.pbLedOff7.Name = "pbLedOff7";
+            this.pbLedOff7.Size = new System.Drawing.Size(22, 18);
+            this.pbLedOff7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedOff7.TabIndex = 66;
+            this.pbLedOff7.TabStop = false;
+            this.pbLedOff7.Tag = "5";
+            // 
+            // pbLedOff8
+            // 
+            this.pbLedOff8.Image = ((System.Drawing.Image)(resources.GetObject("pbLedOff8.Image")));
+            this.pbLedOff8.Location = new System.Drawing.Point(294, 558);
+            this.pbLedOff8.Name = "pbLedOff8";
+            this.pbLedOff8.Size = new System.Drawing.Size(22, 18);
+            this.pbLedOff8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedOff8.TabIndex = 67;
+            this.pbLedOff8.TabStop = false;
+            this.pbLedOff8.Tag = "5";
+            // 
+            // pbLedOff9
+            // 
+            this.pbLedOff9.Image = ((System.Drawing.Image)(resources.GetObject("pbLedOff9.Image")));
+            this.pbLedOff9.Location = new System.Drawing.Point(480, 558);
+            this.pbLedOff9.Name = "pbLedOff9";
+            this.pbLedOff9.Size = new System.Drawing.Size(22, 18);
+            this.pbLedOff9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedOff9.TabIndex = 68;
+            this.pbLedOff9.TabStop = false;
+            this.pbLedOff9.Tag = "5";
+            // 
+            // pbLedOff10
+            // 
+            this.pbLedOff10.Image = ((System.Drawing.Image)(resources.GetObject("pbLedOff10.Image")));
+            this.pbLedOff10.Location = new System.Drawing.Point(105, 757);
+            this.pbLedOff10.Name = "pbLedOff10";
+            this.pbLedOff10.Size = new System.Drawing.Size(22, 18);
+            this.pbLedOff10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedOff10.TabIndex = 69;
+            this.pbLedOff10.TabStop = false;
+            this.pbLedOff10.Tag = "5";
+            // 
+            // pbLedOff11
+            // 
+            this.pbLedOff11.Image = ((System.Drawing.Image)(resources.GetObject("pbLedOff11.Image")));
+            this.pbLedOff11.Location = new System.Drawing.Point(294, 757);
+            this.pbLedOff11.Name = "pbLedOff11";
+            this.pbLedOff11.Size = new System.Drawing.Size(22, 18);
+            this.pbLedOff11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedOff11.TabIndex = 70;
+            this.pbLedOff11.TabStop = false;
+            this.pbLedOff11.Tag = "5";
+            // 
+            // pbLedOff12
+            // 
+            this.pbLedOff12.Image = ((System.Drawing.Image)(resources.GetObject("pbLedOff12.Image")));
+            this.pbLedOff12.Location = new System.Drawing.Point(480, 757);
+            this.pbLedOff12.Name = "pbLedOff12";
+            this.pbLedOff12.Size = new System.Drawing.Size(22, 18);
+            this.pbLedOff12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedOff12.TabIndex = 71;
+            this.pbLedOff12.TabStop = false;
+            this.pbLedOff12.Tag = "5";
+            // 
+            // pbLedON10
+            // 
+            this.pbLedON10.Image = ((System.Drawing.Image)(resources.GetObject("pbLedON10.Image")));
+            this.pbLedON10.Location = new System.Drawing.Point(105, 757);
+            this.pbLedON10.Name = "pbLedON10";
+            this.pbLedON10.Size = new System.Drawing.Size(22, 18);
+            this.pbLedON10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedON10.TabIndex = 76;
+            this.pbLedON10.TabStop = false;
+            // 
+            // pbLedON9
+            // 
+            this.pbLedON9.Image = ((System.Drawing.Image)(resources.GetObject("pbLedON9.Image")));
+            this.pbLedON9.Location = new System.Drawing.Point(480, 558);
+            this.pbLedON9.Name = "pbLedON9";
+            this.pbLedON9.Size = new System.Drawing.Size(22, 18);
+            this.pbLedON9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedON9.TabIndex = 77;
+            this.pbLedON9.TabStop = false;
+            // 
+            // pbLedON8
+            // 
+            this.pbLedON8.Image = ((System.Drawing.Image)(resources.GetObject("pbLedON8.Image")));
+            this.pbLedON8.Location = new System.Drawing.Point(294, 558);
+            this.pbLedON8.Name = "pbLedON8";
+            this.pbLedON8.Size = new System.Drawing.Size(22, 18);
+            this.pbLedON8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedON8.TabIndex = 78;
+            this.pbLedON8.TabStop = false;
+            // 
+            // pbLedON7
+            // 
+            this.pbLedON7.Image = ((System.Drawing.Image)(resources.GetObject("pbLedON7.Image")));
+            this.pbLedON7.Location = new System.Drawing.Point(108, 558);
+            this.pbLedON7.Name = "pbLedON7";
+            this.pbLedON7.Size = new System.Drawing.Size(22, 18);
+            this.pbLedON7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedON7.TabIndex = 79;
+            this.pbLedON7.TabStop = false;
+            // 
+            // pbLedON6
+            // 
+            this.pbLedON6.Image = ((System.Drawing.Image)(resources.GetObject("pbLedON6.Image")));
+            this.pbLedON6.Location = new System.Drawing.Point(480, 378);
+            this.pbLedON6.Name = "pbLedON6";
+            this.pbLedON6.Size = new System.Drawing.Size(22, 18);
+            this.pbLedON6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedON6.TabIndex = 80;
+            this.pbLedON6.TabStop = false;
+            // 
+            // pbLedON5
+            // 
+            this.pbLedON5.Image = ((System.Drawing.Image)(resources.GetObject("pbLedON5.Image")));
+            this.pbLedON5.Location = new System.Drawing.Point(294, 378);
+            this.pbLedON5.Name = "pbLedON5";
+            this.pbLedON5.Size = new System.Drawing.Size(22, 18);
+            this.pbLedON5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedON5.TabIndex = 81;
+            this.pbLedON5.TabStop = false;
+            // 
+            // pbLedON4
+            // 
+            this.pbLedON4.Image = ((System.Drawing.Image)(resources.GetObject("pbLedON4.Image")));
+            this.pbLedON4.Location = new System.Drawing.Point(108, 378);
+            this.pbLedON4.Name = "pbLedON4";
+            this.pbLedON4.Size = new System.Drawing.Size(22, 18);
+            this.pbLedON4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedON4.TabIndex = 82;
+            this.pbLedON4.TabStop = false;
+            // 
+            // pbLedON1
+            // 
+            this.pbLedON1.Image = ((System.Drawing.Image)(resources.GetObject("pbLedON1.Image")));
+            this.pbLedON1.Location = new System.Drawing.Point(108, 181);
+            this.pbLedON1.Name = "pbLedON1";
+            this.pbLedON1.Size = new System.Drawing.Size(22, 18);
+            this.pbLedON1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedON1.TabIndex = 83;
+            this.pbLedON1.TabStop = false;
+            // 
+            // pbLedON2
+            // 
+            this.pbLedON2.Image = ((System.Drawing.Image)(resources.GetObject("pbLedON2.Image")));
+            this.pbLedON2.Location = new System.Drawing.Point(294, 181);
+            this.pbLedON2.Name = "pbLedON2";
+            this.pbLedON2.Size = new System.Drawing.Size(22, 18);
+            this.pbLedON2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedON2.TabIndex = 84;
+            this.pbLedON2.TabStop = false;
+            // 
+            // pbLedON3
+            // 
+            this.pbLedON3.Image = ((System.Drawing.Image)(resources.GetObject("pbLedON3.Image")));
+            this.pbLedON3.Location = new System.Drawing.Point(477, 181);
+            this.pbLedON3.Name = "pbLedON3";
+            this.pbLedON3.Size = new System.Drawing.Size(22, 18);
+            this.pbLedON3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedON3.TabIndex = 85;
+            this.pbLedON3.TabStop = false;
+            // 
+            // pbLedON12
+            // 
+            this.pbLedON12.Image = ((System.Drawing.Image)(resources.GetObject("pbLedON12.Image")));
+            this.pbLedON12.Location = new System.Drawing.Point(480, 757);
+            this.pbLedON12.Name = "pbLedON12";
+            this.pbLedON12.Size = new System.Drawing.Size(22, 18);
+            this.pbLedON12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedON12.TabIndex = 86;
+            this.pbLedON12.TabStop = false;
+            // 
+            // pbLedON11
+            // 
+            this.pbLedON11.Image = ((System.Drawing.Image)(resources.GetObject("pbLedON11.Image")));
+            this.pbLedON11.Location = new System.Drawing.Point(294, 757);
+            this.pbLedON11.Name = "pbLedON11";
+            this.pbLedON11.Size = new System.Drawing.Size(22, 18);
+            this.pbLedON11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLedON11.TabIndex = 87;
+            this.pbLedON11.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1359, 869);
+            this.Controls.Add(this.pbLedON11);
+            this.Controls.Add(this.pbLedON12);
+            this.Controls.Add(this.pbLedON3);
+            this.Controls.Add(this.pbLedON2);
+            this.Controls.Add(this.pbLedON1);
+            this.Controls.Add(this.pbLedON4);
+            this.Controls.Add(this.pbLedON5);
+            this.Controls.Add(this.pbLedON6);
+            this.Controls.Add(this.pbLedON7);
+            this.Controls.Add(this.pbLedON8);
+            this.Controls.Add(this.pbLedON9);
+            this.Controls.Add(this.pbLedON10);
+            this.Controls.Add(this.pbLedOff12);
+            this.Controls.Add(this.pbLedOff11);
+            this.Controls.Add(this.pbLedOff10);
+            this.Controls.Add(this.pbLedOff9);
+            this.Controls.Add(this.pbLedOff8);
+            this.Controls.Add(this.pbLedOff7);
+            this.Controls.Add(this.pbLedOff6);
+            this.Controls.Add(this.pbLedOff5);
+            this.Controls.Add(this.pbLedOff4);
+            this.Controls.Add(this.pbLedOff3);
+            this.Controls.Add(this.pbLedOff2);
+            this.Controls.Add(this.pbLedOff1);
             this.Controls.Add(this.txtBoxLastAction);
             this.Controls.Add(this.btnPayNow);
             this.Controls.Add(this.pbCoinSlot);
@@ -691,6 +1015,30 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFivePound)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTwoPound)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedOff12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLedON11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -749,6 +1097,30 @@
         private System.Windows.Forms.PictureBox pbFivePound;
         private System.Windows.Forms.PictureBox pbTwoPound;
         private System.Windows.Forms.TextBox txtBoxLastAction;
+        private System.Windows.Forms.PictureBox pbLedOff1;
+        private System.Windows.Forms.PictureBox pbLedOff2;
+        private System.Windows.Forms.PictureBox pbLedOff3;
+        private System.Windows.Forms.PictureBox pbLedOff4;
+        private System.Windows.Forms.PictureBox pbLedOff5;
+        private System.Windows.Forms.PictureBox pbLedOff6;
+        private System.Windows.Forms.PictureBox pbLedOff7;
+        private System.Windows.Forms.PictureBox pbLedOff8;
+        private System.Windows.Forms.PictureBox pbLedOff9;
+        private System.Windows.Forms.PictureBox pbLedOff10;
+        private System.Windows.Forms.PictureBox pbLedOff11;
+        private System.Windows.Forms.PictureBox pbLedOff12;
+        private System.Windows.Forms.PictureBox pbLedON10;
+        private System.Windows.Forms.PictureBox pbLedON9;
+        private System.Windows.Forms.PictureBox pbLedON8;
+        private System.Windows.Forms.PictureBox pbLedON7;
+        private System.Windows.Forms.PictureBox pbLedON6;
+        private System.Windows.Forms.PictureBox pbLedON5;
+        private System.Windows.Forms.PictureBox pbLedON4;
+        private System.Windows.Forms.PictureBox pbLedON1;
+        private System.Windows.Forms.PictureBox pbLedON2;
+        private System.Windows.Forms.PictureBox pbLedON3;
+        private System.Windows.Forms.PictureBox pbLedON12;
+        private System.Windows.Forms.PictureBox pbLedON11;
     }
 }
 

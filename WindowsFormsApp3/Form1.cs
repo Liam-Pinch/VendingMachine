@@ -21,8 +21,23 @@ namespace WindowsFormsApp3
         public Form1()
         {
             InitializeComponent();
+            setImageTags();
             pbCoinSlot.AllowDrop = true;
-           
+            pbLedON1.Visible = false; 
+            pbLedON2.Visible = false; 
+            pbLedON3.Visible = false; 
+            pbLedON4.Visible = false; 
+            pbLedON5.Visible = false; 
+            pbLedON6.Visible = false; 
+            pbLedON7.Visible = false; 
+            pbLedON8.Visible = false; 
+            pbLedON9.Visible = false; 
+            pbLedON10.Visible = false;
+            pbLedON11.Visible = false; 
+            pbLedON12.Visible = false; 
+
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -117,82 +132,93 @@ namespace WindowsFormsApp3
         }
         private void addItem(string P)
         {
-
+            // update textbox for last item ordered
             txtBoxLastAction.Text = P;
-
-
-
-
             switch (P)
             {
+                // switch to control logic. Item selected by Button tag send by ref.
                 case "Coca-Cola Original":
+                    // function to update orderbox
                     OrderBoxUpdate(P);
+                    // function to update stock available.
+                    stockAvailable(P);
                     double tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceOne.Text);
                     txtBoxTotalCost.Text = tempTotal.ToString();
                     return;
 
                 case "Sprite":
                     OrderBoxUpdate(P);
+                    stockAvailable(P);
                     tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceTwo.Text);
                     txtBoxTotalCost.Text = tempTotal.ToString();
                     return;
 
                 case "Mountain Dew":
                     OrderBoxUpdate(P);
+                    stockAvailable(P);
                     tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceThree.Text);
                     txtBoxTotalCost.Text = tempTotal.ToString();
                     return;
 
                 case "Pepsi":
                     OrderBoxUpdate(P);
+                    stockAvailable(P);
                     tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceFour.Text);
                     txtBoxTotalCost.Text = tempTotal.ToString();
                     return;
 
                 case "Monster":
                     OrderBoxUpdate(P);
+                    stockAvailable(P);
                     tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceFive.Text);
                     txtBoxTotalCost.Text = tempTotal.ToString();
                     return;
 
                 case "Redbull":
                     OrderBoxUpdate(P);
+                    stockAvailable(P);
                     tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceSix.Text);
                     txtBoxTotalCost.Text = tempTotal.ToString();
                     return;
 
                 case "Milkyway":
                     OrderBoxUpdate(P);
+                    stockAvailable(P);
                     tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceSeven.Text);
                     txtBoxTotalCost.Text = tempTotal.ToString();
                     return;
 
                 case "KitKat":
                     OrderBoxUpdate(P);
+                    stockAvailable(P);
                     tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceEight.Text);
                     txtBoxTotalCost.Text = tempTotal.ToString();
                     return;
 
                 case "M&M":
                     OrderBoxUpdate(P);
+                    stockAvailable(P);
                     tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceNine.Text);
                     txtBoxTotalCost.Text = tempTotal.ToString();
                     return;
 
                 case "Doritos":
                     OrderBoxUpdate(P);
+                    stockAvailable(P);
                     tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceTen.Text);
                     txtBoxTotalCost.Text = tempTotal.ToString();
                     return;
 
                 case "Cheetos":
                     OrderBoxUpdate(P);
+                    stockAvailable(P);
                     tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceEleven.Text);
                     txtBoxTotalCost.Text = tempTotal.ToString();
                     return;
 
                 case "Takis":
                     OrderBoxUpdate(P);
+                    stockAvailable(P);
                     tempTotal = double.Parse(txtBoxTotalCost.Text) + double.Parse(tbPriceTwelve.Text);
                     txtBoxTotalCost.Text = tempTotal.ToString();
                     return;
@@ -223,6 +249,7 @@ namespace WindowsFormsApp3
                 }
 
             }
+            // forloop to check if an item exists in OrderDisplay box. Replace with updated No# of orders.
             for (int i = 0; i < OrderDisplayBox.Items.Count; i++)
             {
                 if (OrderDisplayBox.Items[i].ToString().Contains(P))
@@ -233,6 +260,235 @@ namespace WindowsFormsApp3
             // adds the item back to the listbox with the number of items added.
             OrderDisplayBox.Items.Add(P + "        " + (counter + 1));
         }
+
+        private void stockAvailable(string  P)
+        {
+            // switch to control logic for stock available.
+            switch (P)
+            {
+                
+                case "Coca-Cola Original":
+                    // check the tag for amount avialable.
+                    string tempStockCheck = pbLedOff1.Tag.ToString();
+                    int checker = int.Parse(tempStockCheck) - 1;
+                    // check if stock is greater than 0.
+                    if(checker == 0)
+                    {
+                        pbLedOff1.Visible = false;
+                        pbLedON1.Visible = true;
+
+                        btnDrinkOne.Enabled = false;
+                    }
+                    // if greater than 0, just decremement value stored in tag.
+                    else
+                    {
+                        pbLedOff1.Tag = checker;
+                    }
+                    return;
+
+                case "Sprite":
+                    tempStockCheck = pbLedOff2.Tag.ToString();
+                    checker = int.Parse(tempStockCheck) - 1;
+
+                    if (checker == 0)
+                    {
+                        pbLedOff2.Visible = false;
+                        pbLedON2.Visible = true;
+
+                        btnDrinkTwo.Enabled = false;
+                    }
+
+                    else
+                    {
+                        pbLedOff2.Tag = checker;
+                    }
+                    return;
+
+                case "Mountain Dew":
+                    tempStockCheck = pbLedOff3.Tag.ToString();
+                    checker = int.Parse(tempStockCheck) - 1;
+
+                    if (checker == 0)
+                    {
+                        pbLedOff3.Visible = false;
+                        pbLedON3.Visible = true;
+
+                        btnDrinkThree.Enabled = false;
+                    }
+
+                    else
+                    {
+                        pbLedOff3.Tag = checker;
+                    }
+
+                    return;
+
+                case "Pepsi":
+                    tempStockCheck = pbLedOff4.Tag.ToString();
+                    checker = int.Parse(tempStockCheck) - 1;
+
+                    if (checker == 0)
+                    {
+                        pbLedOff4.Visible = false;
+                        pbLedON4.Visible = true;
+
+                        btnDrinkFour.Enabled = false;
+                    }
+
+                    else
+                    {
+                        pbLedOff4.Tag = checker;
+                    }
+                    return;
+
+                case "Monster":
+                    tempStockCheck = pbLedOff5.Tag.ToString();
+                    checker = int.Parse(tempStockCheck) - 1;
+
+                    if (checker == 0)
+                    {
+                        pbLedOff5.Visible = false;
+                        pbLedON5.Visible = true;
+
+                        btnDrinkFive.Enabled = false;
+                    }
+
+                    else
+                    {
+                        pbLedOff5.Tag = checker;
+                    }
+                    return;
+
+                case "Redbull":
+                    tempStockCheck = pbLedOff6.Tag.ToString();
+                    checker = int.Parse(tempStockCheck) - 1;
+
+                    if (checker == 0)
+                    {
+                        pbLedOff6.Visible = false;
+                        pbLedON6.Visible = true;
+
+                        btnDrinkSix.Enabled = false;
+                    }
+
+                    else
+                    {
+                        pbLedOff6.Tag = checker;
+                    }
+                    return;
+
+                case "Milkyway":
+                    tempStockCheck = pbLedOff7.Tag.ToString();
+                    checker = int.Parse(tempStockCheck) - 1;
+
+                    if (checker == 0)
+                    {
+                        pbLedOff7.Visible = false;
+                        pbLedON7.Visible = true;
+
+                        btnChocoOne.Enabled = false;
+                    }
+
+                    else
+                    {
+                        pbLedOff7.Tag = checker;
+                    }
+                    return;
+                    
+
+                case "KitKat":
+                    tempStockCheck = pbLedOff8.Tag.ToString();
+                    checker = int.Parse(tempStockCheck) - 1;
+
+                    if (checker == 0)
+                    {
+                        pbLedOff8.Visible = false;
+                        pbLedON8.Visible = true;
+
+                        btnChocoTwo.Enabled = false;
+                    }
+
+                    else
+                    {
+                        pbLedOff8.Tag = checker;
+                    }
+                    return;
+
+                case "M&M":
+                    tempStockCheck = pbLedOff9.Tag.ToString();
+                    checker = int.Parse(tempStockCheck) - 1;
+
+                    if (checker == 0)
+                    {
+                        pbLedOff9.Visible = false;
+                        pbLedON9.Visible = true;
+
+                        btnChocoThree.Enabled = false;
+                    }
+
+                    else
+                    {
+                        pbLedOff9.Tag = checker;
+                    }
+                    return;
+
+                case "Doritos":
+                    tempStockCheck = pbLedOff10.Tag.ToString();
+                    checker = int.Parse(tempStockCheck) - 1;
+
+                    if (checker == 0)
+                    {
+                        pbLedOff10.Visible = false;
+                        pbLedON10.Visible = true;
+
+                        btnCrispOne.Enabled = false;
+                    }
+
+                    else
+                    {
+                        pbLedOff10.Tag = checker;
+                    }
+                    return;
+                    
+
+                case "Cheetos":
+                    tempStockCheck = pbLedOff11.Tag.ToString();
+                    checker = int.Parse(tempStockCheck) - 1;
+
+                    if (checker == 0)
+                    {
+                        pbLedOff11.Visible = false;
+                        pbLedON11.Visible = true;
+
+                        btnCrispTwo.Enabled = false;
+                    }
+
+                    else
+                    {
+                        pbLedOff11.Tag = checker;
+                    }
+                    return;
+
+                case "Takis":
+                    tempStockCheck = pbLedOff12.Tag.ToString();
+                    checker = int.Parse(tempStockCheck) - 1;
+
+                    if (checker == 0)
+                    {
+                        pbLedOff12.Visible = false;
+                        pbLedON12.Visible = true;
+
+                        btnCrispThree.Enabled = false;
+                    }
+
+                    else
+                    {
+                        pbLedOff12.Tag = checker;
+                    }
+                    return;
+            }
+        } 
+
         private void btnClear_Click(object sender, EventArgs e)
         {
             // call the reset form function. Disabling the money buttons.
@@ -245,7 +501,27 @@ namespace WindowsFormsApp3
 
         }
 
-        
+        private void setImageTags()
+        {
+            // function to set item quantities to a random number between 1-10.
+            Random random = new Random();
+
+            // use 1, 11 because random is only inclusive of the lower limit not upper.
+            pbLedOff1.Tag = random.Next(1, 11);
+            pbLedOff2.Tag = random.Next(1, 11);
+            pbLedOff3.Tag = random.Next(1, 11);
+            pbLedOff4.Tag = random.Next(1, 11);
+            pbLedOff5.Tag = random.Next(1, 11);
+            pbLedOff6.Tag = random.Next(1, 11);
+            pbLedOff7.Tag = random.Next(1, 11);
+            pbLedOff8.Tag = random.Next(1, 11);
+            pbLedOff9.Tag = random.Next(1, 11);
+            pbLedOff10.Tag = random.Next(1, 11);
+            pbLedOff11.Tag = random.Next(1, 11);
+            pbLedOff12.Tag = random.Next(1, 11);
+
+
+        }
 
         private void btnPayNow_Click(object sender, EventArgs e)
         {
@@ -346,6 +622,24 @@ namespace WindowsFormsApp3
             // disable all the buttons in group 1 or "Money secontion"
             groupBox1.Visible = false;
             pbCoinSlot.Visible = false;
+
+            // reset stock quanitity tags.
+            setImageTags();
+
+            //  reset leds.
+            pbLedON1.Visible = false; pbLedOff1.Visible = true;
+            pbLedON2.Visible = false; pbLedOff2.Visible = true;
+            pbLedON3.Visible = false; pbLedOff3.Visible = true;
+            pbLedON4.Visible = false; pbLedOff4.Visible = true;
+            pbLedON5.Visible = false; pbLedOff5.Visible = true;
+            pbLedON6.Visible = false; pbLedOff6.Visible = true;
+            pbLedON7.Visible = false; pbLedOff7.Visible = true;
+            pbLedON8.Visible = false; pbLedOff8.Visible = true;
+            pbLedON9.Visible = false; pbLedOff9.Visible = true;
+            pbLedON10.Visible = false; pbLedOff10.Visible = true;
+            pbLedON11.Visible = false; pbLedOff11.Visible = true;
+            pbLedON12.Visible = false; pbLedOff12.Visible = true;
+
         }
 
         private void changeCheck()
@@ -433,6 +727,7 @@ namespace WindowsFormsApp3
            
 
         }
+
 
         private void writeToFile()
         {
